@@ -80,7 +80,7 @@ def create_terms(data, terms):
     pyDatalog.create_terms(','.join(terms))
 
 
-def build_datalog_model(data):
+def build_datalog_model(data, rule_list):
     pyDatalog.clear()
     for d in data.values:
         # === Extensional Database ===
@@ -90,8 +90,8 @@ def build_datalog_model(data):
 hasSpouse(A, 'No') <= gender(A, '"male"@en')""") # rule_list
 
 
-def reasoning_datalog(data, head_dict):
-    build_datalog_model(data)
+def reasoning_datalog(data, head_dict, rule_list):
+    build_datalog_model(data, rule_list)
     list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'])
     #     === Query Datalog model ===
     for rule_h, val in head_dict.items():
@@ -109,10 +109,6 @@ def reasoning_datalog(data, head_dict):
     return graph_deduced, list_deduced_link
 
 
-# graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict)
-# display(graph_deduced.shape, graph_deduced.head())
-
-
 # file_name = 'AMIERules/FrenchRoyalty_AMIE_Rules.csv'
 # path = '../KG/FrenchRoyalty/french_training.tsv'
 def main(*args):
@@ -125,7 +121,7 @@ def main(*args):
     """List of Terms considered in Datalog program"""
     create_terms(data, terms)
     """Reasoning Datalog program"""
-    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict)
+    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list)
     list_deduced_link.to_csv(args[2], index=None, header=None)
     graph_deduced.to_csv(args[3], index=None, header=None)
 
