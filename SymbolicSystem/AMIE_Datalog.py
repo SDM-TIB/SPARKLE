@@ -75,23 +75,26 @@ def load_graph(file_name):
 
 
 # #### List of Terms considered in Datalog program
-def create_terms(data, terms):
-    terms.update(set(data.p.unique()))
-    pyDatalog.create_terms(','.join(terms))
+term_graph = pd.read_csv('AMIERules/terms_FrenchRoyalty.csv')
+pyDatalog.create_terms(','.join(term_graph.term.tolist()))
+# def create_terms(data, terms):
+#     terms.update(set(data.p.unique()))
+#     pyDatalog.create_terms(','.join(terms))
 
 
-def build_datalog_model(data, rule_list):
+def build_datalog_model(data, rule_list, terms):
     pyDatalog.clear()
     for d in data.values:
         # === Extensional Database ===
         assert_fact(d[1], d[0], d[2])
 
-    load("""spouse(A, B) <= parent(E, A) & predecessor(E, B)
-hasSpouse(A, 'No') <= gender(A, '"male"@en')""") # rule_list
+    load(rule_list)
+    # load("""spouse(A, B) <= parent(E, A) & predecessor(E, B)
+# hasSpouse(A, 'No') <= gender(A, '"male"@en')""") # rule_list
 
 
-def reasoning_datalog(data, head_dict, rule_list):
-    build_datalog_model(data, rule_list)
+def reasoning_datalog(data, head_dict, rule_list, terms):
+    build_datalog_model(data, rule_list, terms)
     list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'])
     #     === Query Datalog model ===
     for rule_h, val in head_dict.items():
@@ -119,9 +122,9 @@ def main(*args):
     """Load Knowledge Graph"""
     data = load_graph(args[1])
     """List of Terms considered in Datalog program"""
-    create_terms(data, terms)
+    # create_terms(data, terms)
     """Reasoning Datalog program"""
-    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list)
+    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list, terms)
     list_deduced_link.to_csv(args[2], index=None, header=None)
     graph_deduced.to_csv(args[3], index=None, header=None)
 
