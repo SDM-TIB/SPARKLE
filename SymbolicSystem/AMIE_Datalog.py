@@ -75,7 +75,7 @@ def load_graph(file_name):
 
 
 # #### List of Terms considered in Datalog program
-term_graph = pd.read_csv('AMIERules/terms_FrenchRoyalty.csv')
+term_graph = pd.read_csv('AMIERules/FrenchRoyalty/terms_FrenchRoyalty.csv')
 pyDatalog.create_terms(','.join(term_graph.term.tolist()))
 # def create_terms(data, terms):
 #     terms.update(set(data.p.unique()))
