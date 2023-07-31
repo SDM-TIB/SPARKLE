@@ -13,3 +13,6 @@ Datalog reasoning with AMIE rules
 
 ## 4. Running example for *Datalog program: * *AMIE_Datalog*
 >python .\AMIE_Datalog.py AMIERules/FrenchRoyalty/FrenchRoyalty_AMIE_Rules.csv ../KG/FrenchRoyalty/french_training.tsv deduced.csv enriched.csv
+
+## 5. Running example for creating subset of AMIE rules given a percentile *CreateSubsetAMIE_Rule*
+>python .\CreateSubsetAMIE_Rule.py 90 AMIERules/FrenchRoyalty/ FrenchRoyalty_AMIE_Rules
