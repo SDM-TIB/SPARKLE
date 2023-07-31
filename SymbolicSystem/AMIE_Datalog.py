@@ -89,8 +89,9 @@ def build_datalog_model(data, rule_list, terms):
         assert_fact(d[1], d[0], d[2])
 
     load(rule_list)
-    # load("""spouse(A, B) <= parent(E, A) & predecessor(E, B)
-# hasSpouse(A, 'No') <= gender(A, '"male"@en')""") # rule_list
+#     load("""spouse(A, B) <= parent(E, A) & predecessor(E, B)
+# hasSpouse(A, 'No') <= gender(A, '"male"@en')
+# successor(A, B) <= spouse(E, A) & successor(E, B)""") # rule_list
 
 
 def reasoning_datalog(data, head_dict, rule_list, terms):
