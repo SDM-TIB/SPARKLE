@@ -16,7 +16,7 @@ python .\Datalog_Terms.py ../KG/FrenchRoyalty/french_training.tsv AMIERules/Fren
 ```python
 python .\Datalog_Terms.py ../KG/Family/family_training_triples.tsv AMIERules/Family/terms_Family.csv
 ```
-## 4. Running example for *Datalog program: * *AMIE_Datalog*
+## 4. Running example for *Datalog program*: *AMIE_Datalog*
 ```python
 python .\AMIE_Datalog.py AMIERules/FrenchRoyalty/FrenchRoyalty_AMIE_Rules.csv ../KG/FrenchRoyalty/french_training.tsv deduced.csv enriched.csv
 ```
