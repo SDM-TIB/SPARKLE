@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  sparkle:
+    build: .
+    image: sdmtib/sparkle:latest
+    container_name: sparkle
+    volumes:
+      - ./KG:/SPARKLE/KG
+      - ./SymbolicSystem/AMIERules/:/SPARKLE/SymbolicSystem/AMIERules/
+    networks:
+      - sparkle
+
+networks:
+  sparkle:
+    external: false
