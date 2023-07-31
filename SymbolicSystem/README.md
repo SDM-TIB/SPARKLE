@@ -8,7 +8,9 @@ Datalog reasoning with AMIE rules
 * pandas
 
 ## 3. Running example for extracting *Datalog Terms*
+`French Royalty KG`
 >python .\Datalog_Terms.py ../KG/FrenchRoyalty/french_training.tsv AMIERules/FrenchRoyalty/terms_FrenchRoyalty.csv
+`Family KG`
 >python .\Datalog_Terms.py ../KG/Family/family_training_triples.tsv AMIERules/Family/terms_Family.csv
 
 ## 4. Running example for *Datalog program: * *AMIE_Datalog*
