@@ -9,9 +9,10 @@ from pyDatalog.pyDatalog import assert_fact, load, ask
 
 def load_AMIE_rule(file_name):
     result = pd.read_csv(file_name)  # , delimiter='\t'
+    result.replace('type', 'Type', regex=True, inplace=True)
     result.Body = result.Body.str.rstrip()
-    result.replace('>', '', regex=True, inplace=True)
-    result.replace('<', '', regex=True, inplace=True)
+    # result.replace('>', '', regex=True, inplace=True)
+    # result.replace('<', '', regex=True, inplace=True)
     return result
 
 
@@ -43,24 +44,48 @@ def create_IDB(result):
 
         #     === Creating Body of Rule ===
         body = d[0].split('  ')
+        rule_b = """"""
         for i in range(2, len(body), 3):
-            sub, pred, obj = body[i - 2], body[i - 1], body[i]
-            terms.add(pred)
-            if sub.startswith('?'):
-                sub = sub.replace('?', '')
-                sub = sub.capitalize()
-                terms.update(sub)
-                rule += pred + '(' + sub + ', '
+            sub, pred_body, obj = body[i - 2], body[i - 1], body[i]
+            # print(pred, '===', pred_body)
+            terms.add(pred_body)
+            if pred_body == pred:
+                if sub.startswith('?'):
+                    sub = sub.replace('?', '')
+                    sub = sub.capitalize()
+                    terms.update(sub)
+                    b = pred_body + '(' + sub + ', '
+                else:
+                    b = pred_body + """('""" + sub + """', """
+                if obj.startswith('?'):
+                    obj = obj.replace('?', '')
+                    obj = obj.capitalize()
+                    terms.update(obj)
+                    b += obj + ') & '
+                else:
+                    b += """'""" + obj + """') & """
+                b += rule_b
+                # print(rule_b, '--', b)
+                rule_b = b
             else:
-                rule += pred + """('""" + sub + """', """
-            if obj.startswith('?'):
-                obj = obj.replace('?', '')
-                obj = obj.capitalize()
-                terms.update(obj)
-                rule += obj + ') & '
-            else:
-                rule += """'""" + obj + """') & """
-        rule = rule[:-3]
+                if sub.startswith('?'):
+                    sub = sub.replace('?', '')
+                    sub = sub.capitalize()
+                    terms.update(sub)
+                    rule_b += pred_body + '(' + sub + ', '
+                else:
+                    rule_b += pred_body + """('""" + sub + """', """
+                if obj.startswith('?'):
+                    obj = obj.replace('?', '')
+                    obj = obj.capitalize()
+                    terms.update(obj)
+                    rule_b += obj + ') & '
+                else:
+                    rule_b += """'""" + obj + """') & """
+        
+        rule_b = rule_b[:-3]
+        rule += rule_b
+        # print(rule)
         rule_list += '\n' + rule
     return rule_list, head_dict, terms
 
@@ -68,15 +93,18 @@ def create_IDB(result):
 def load_graph(file_name):
     data = pd.read_csv(file_name, delimiter='\t', header=None)  #
     data.columns = ['s', 'p', 'o']
-    data.replace('>', '', regex=True, inplace=True)
-    data.replace('<', '', regex=True, inplace=True)
-    data.replace(' .', '', regex=True, inplace=True)
+    data.replace('type', 'Type', regex=True, inplace=True)
+    # data.replace('>', '', regex=True, inplace=True)
+    # data.replace('<', '', regex=True, inplace=True)
+    # data.replace(' .', '', regex=True, inplace=True)
     return data
 
 
 # #### List of Terms considered in Datalog program
 term_graph = pd.read_csv('AMIERules/FrenchRoyalty/terms_FrenchRoyalty.csv')
 pyDatalog.create_terms(','.join(term_graph.term.tolist()))
+
+
 # def create_terms(data, terms):
 #     terms.update(set(data.p.unique()))
 #     pyDatalog.create_terms(','.join(terms))
@@ -90,9 +118,19 @@ def build_datalog_model(data, rule_list, terms):
         assert_fact(d[1], d[0], d[2])
 
     load(rule_list)
-    # inferred_rdf_star_triple(A, B, T) & rdf_star_triple(B, C, T2)
     # Type(A, B) <= Type(E, B) & child(E, A)
-    # load("""Type(A, B) <= child(E, A) & Type(E, B)""") # rule_list
+#     load("""parent(A, B) <= father(A, B)
+# parent(A, B) <= mother(A, B)
+# successor(A, B) <= predecessor(B, A) & spouse(A, B)
+# successor(A, B) <= mother(B, A) & predecessor(B, A)
+# predecessor(A, B) <= predecessor(B, A) & successor(B, A)
+# parent(A, B) <= father(A, B) & successor(B, A)
+# name(A, B) <= name(F, B) & name(A, F)
+# Type(A, B) <= Type(E, B) & mother(E, A)
+# spouse(A, B) <= spouse(B, A) & successor(B, A)
+# spouse(A, B) <= spouse(B, A) & successor(A, B)
+# Type(A, B) <= Type(E, B) & successor(E, A)
+# """)  # rule_list
 
 
 def reasoning_datalog(data, head_dict, rule_list, terms):
@@ -110,10 +148,12 @@ def reasoning_datalog(data, head_dict, rule_list, terms):
             list_deduced_link = pd.concat([list_deduced_link, pd.DataFrame(data=x)])
     #     === enriching original graph with the new links deduced ===
     list_deduced_link = list_deduced_link.merge(data, how='outer', indicator=True).loc[
-        lambda x: x['_merge'] == 'left_only'] #, on='DrugName'
+        lambda x: x['_merge'] == 'left_only']  # , on='DrugName'
     list_deduced_link = list_deduced_link.drop(columns=['_merge'])
     graph_deduced = pd.concat([data, list_deduced_link])
     graph_deduced.drop_duplicates(keep='first', inplace=True)
+    list_deduced_link.replace('Type', 'type', regex=True, inplace=True)
+    graph_deduced.replace('Type', 'type', regex=True, inplace=True)
     return graph_deduced, list_deduced_link
 
 
@@ -130,8 +170,8 @@ def main(*args):
     # create_terms(data, terms)
     """Reasoning Datalog program"""
     graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list, terms)
-    list_deduced_link.to_csv(args[2], index=None, header=None)
-    graph_deduced.to_csv(args[3], index=None, header=None)
+    list_deduced_link.to_csv(args[2], index=None, header=None, sep='\t')
+    graph_deduced.to_csv(args[3], index=None, header=None, sep='\t')
 
 
 if __name__ == '__main__':
