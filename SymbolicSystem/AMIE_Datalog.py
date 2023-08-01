@@ -83,15 +83,16 @@ pyDatalog.create_terms(','.join(term_graph.term.tolist()))
 
 
 def build_datalog_model(data, rule_list, terms):
+    print(rule_list)
     pyDatalog.clear()
     for d in data.values:
         # === Extensional Database ===
         assert_fact(d[1], d[0], d[2])
 
     load(rule_list)
-#     load("""spouse(A, B) <= parent(E, A) & predecessor(E, B)
-# hasSpouse(A, 'No') <= gender(A, '"male"@en')
-# successor(A, B) <= spouse(E, A) & successor(E, B)""") # rule_list
+    # inferred_rdf_star_triple(A, B, T) & rdf_star_triple(B, C, T2)
+    # Type(A, B) <= Type(E, B) & child(E, A)
+    # load("""Type(A, B) <= child(E, A) & Type(E, B)""") # rule_list
 
 
 def reasoning_datalog(data, head_dict, rule_list, terms):
@@ -108,6 +109,9 @@ def reasoning_datalog(data, head_dict, rule_list, terms):
                 x = {'s': [deduced_link[i][0]], 'p': val[0], 'o': val[1]}
             list_deduced_link = pd.concat([list_deduced_link, pd.DataFrame(data=x)])
     #     === enriching original graph with the new links deduced ===
+    list_deduced_link = list_deduced_link.merge(data, how='outer', indicator=True).loc[
+        lambda x: x['_merge'] == 'left_only'] #, on='DrugName'
+    list_deduced_link = list_deduced_link.drop(columns=['_merge'])
     graph_deduced = pd.concat([data, list_deduced_link])
     graph_deduced.drop_duplicates(keep='first', inplace=True)
     return graph_deduced, list_deduced_link

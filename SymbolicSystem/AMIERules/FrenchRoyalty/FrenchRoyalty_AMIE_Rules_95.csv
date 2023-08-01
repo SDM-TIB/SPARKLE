@@ -9,4 +9,4 @@ Body,Head,Head_Coverage,Std_Confidence,PCA_Confidence,Positive_Examples,Body_siz
 ?a  father  ?f  ?f  spouse  ?b   ,?a  mother  ?b,0.558024691,0.558024691,0.78200692,226,405,289,?a,0.651296829583316
 ?a  parent  ?f  ?b  spouse  ?f   ,?a  parent  ?b,0.483050847,0.635983264,0.838235294,456,717,544,?b,0.6129032254066366
 ?a  parent  ?f  ?f  spouse  ?b   ,?a  parent  ?b,0.481991525,0.634588563,0.828779599,455,717,549,?b,0.6095110511618174
-?e  child  ?a  ?e  type  ?b   ,?a  type  ?b,0.463385354,0.770459082,1.0,772,1002,772,?a,0.6333059883828795
+?e  child  ?a  ?e  Type  ?b   ,?a  Type  ?b,0.463385354,0.770459082,1.0,772,1002,772,?a,0.6333059883828795
