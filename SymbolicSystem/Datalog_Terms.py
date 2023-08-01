@@ -8,9 +8,10 @@ import string
 def load_graph(file_name):
     data = pd.read_csv(file_name, delimiter='\t', header=None)  #
     data.columns = ['s', 'p', 'o']
-    data.replace('>', '', regex=True, inplace=True)
-    data.replace('<', '', regex=True, inplace=True)
-    data.replace(' .', '', regex=True, inplace=True)
+    data.replace('type', 'Type', regex=True, inplace=True)
+    # data.replace('>', '', regex=True, inplace=True)
+    # data.replace('<', '', regex=True, inplace=True)
+    # data.replace(' .', '', regex=True, inplace=True)
     return data
 
 
