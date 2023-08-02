@@ -21,21 +21,17 @@ def create_IDB(result):
     amie_rule = result[['Body', 'Head']]
     rule_list = """"""
     head_dict = dict()
-    terms = set()
     for d in amie_rule.values:
         #     === Creating Head of the Rule ===
         head = d[1].split('  ')
         sub, pred, obj = head[0], head[1], head[2]
-        terms.add(pred)
         sub = sub.replace('?', '')
         sub = sub.capitalize()
-        terms.update(sub)
         head_literal = pred + '(' + sub + ', '
 
         if obj.startswith('?'):
             obj = obj.replace('?', '')
             obj = obj.capitalize()
-            terms.update(obj)
             head_literal += obj + ')'
         else:
             head_literal += """'""" + obj + """')"""
@@ -48,19 +44,16 @@ def create_IDB(result):
         for i in range(2, len(body), 3):
             sub, pred_body, obj = body[i - 2], body[i - 1], body[i]
             # print(pred, '===', pred_body)
-            terms.add(pred_body)
             if pred_body == pred:
                 if sub.startswith('?'):
                     sub = sub.replace('?', '')
                     sub = sub.capitalize()
-                    terms.update(sub)
                     b = pred_body + '(' + sub + ', '
                 else:
                     b = pred_body + """('""" + sub + """', """
                 if obj.startswith('?'):
                     obj = obj.replace('?', '')
                     obj = obj.capitalize()
-                    terms.update(obj)
                     b += obj + ') & '
                 else:
                     b += """'""" + obj + """') & """
@@ -71,14 +64,12 @@ def create_IDB(result):
                 if sub.startswith('?'):
                     sub = sub.replace('?', '')
                     sub = sub.capitalize()
-                    terms.update(sub)
                     rule_b += pred_body + '(' + sub + ', '
                 else:
                     rule_b += pred_body + """('""" + sub + """', """
                 if obj.startswith('?'):
                     obj = obj.replace('?', '')
                     obj = obj.capitalize()
-                    terms.update(obj)
                     rule_b += obj + ') & '
                 else:
                     rule_b += """'""" + obj + """') & """
@@ -87,7 +78,7 @@ def create_IDB(result):
         rule += rule_b
         # print(rule)
         rule_list += '\n' + rule
-    return rule_list, head_dict, terms
+    return rule_list, head_dict
 
 
 def load_graph(file_name):
@@ -111,7 +102,7 @@ pyDatalog.create_terms(','.join(term_graph.term.tolist()))
 #     pyDatalog.create_terms(','.join(terms))
 
 
-def build_datalog_model(data, rule_list, terms):
+def build_datalog_model(data, rule_list):
     print(rule_list)
     pyDatalog.clear()
     for d in data.values:
@@ -134,8 +125,8 @@ def build_datalog_model(data, rule_list, terms):
 # """)  # rule_list
 
 
-def reasoning_datalog(data, head_dict, rule_list, terms):
-    build_datalog_model(data, rule_list, terms)
+def reasoning_datalog(data, head_dict, rule_list):
+    build_datalog_model(data, rule_list)
     list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'])
     #     === Query Datalog model ===
     for rule_h, val in head_dict.items():
@@ -164,13 +155,13 @@ def main(*args):
     """Load AMIE Rules"""
     result = load_AMIE_rule(args[0])
     """Create Intensional Data Base """
-    rule_list, head_dict, terms = create_IDB(result)
+    rule_list, head_dict = create_IDB(result)
     """Load Knowledge Graph"""
     data = load_graph(args[1])
     """List of Terms considered in Datalog program"""
     # create_terms(data, terms)
     """Reasoning Datalog program"""
-    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list, terms)
+    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list)
     list_deduced_link.to_csv(args[2], index=None, header=None, sep='\t')
     graph_deduced.to_csv(args[3], index=None, header=None, sep='\t')
 
