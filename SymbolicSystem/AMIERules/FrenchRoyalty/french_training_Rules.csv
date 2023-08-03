@@ -1,0 +1,202 @@
+Body,Head,Head_Coverage,Std_Confidence,PCA_Confidence,Positive_Examples,Body_size,PCA_Body_size,Functional_variable
+?a  parent  ?b   ,?a  predecessor  ?b,0.295652174,0.111353712,0.457399103,102,916,223,?b
+?a  mother  ?b   ,?a  predecessor  ?b,0.04057971,0.035087719,0.466666667,14,399,30,?b
+?b  child  ?a   ,?a  predecessor  ?b,0.353623188,0.079478827,0.176811594,122,1535,690,?b
+?a  father  ?b   ,?a  predecessor  ?b,0.272463768,0.175046555,0.460784314,94,537,204,?b
+?b  successor  ?a   ,?a  predecessor  ?b,0.724637681,0.730994152,0.925925926,250,342,270,?b
+?b  predecessor  ?a   ,?a  successor  ?b,0.730994152,0.724637681,0.92936803,250,345,269,?a
+?b  parent  ?a   ,?a  successor  ?b,0.280701754,0.104803493,0.461538462,96,916,208,?a
+?b  mother  ?a   ,?a  successor  ?b,0.043859649,0.037593985,0.555555556,15,399,27,?a
+?a  child  ?b   ,?a  successor  ?b,0.362573099,0.080781759,0.20228385,124,1535,613,?a
+?b  father  ?a   ,?a  successor  ?b,0.277777778,0.176908752,0.477386935,95,537,199,?a
+?b  child  ?a   ,?a  father  ?b,0.359404097,0.125732899,0.533149171,193,1535,362,?a
+?a  parent  ?b   ,?a  father  ?b,0.726256983,0.425764192,0.544692737,390,916,716,?a
+?b  successor  ?a   ,?a  father  ?b,0.176908752,0.277777778,0.454545455,95,342,209,?a
+?a  predecessor  ?b   ,?a  father  ?b,0.175046555,0.272463768,0.472361809,94,345,199,?a
+?b  child  ?a   ,?a  mother  ?b,0.390977444,0.101628664,0.481481481,156,1535,324,?a
+?a  parent  ?b   ,?a  mother  ?b,0.751879699,0.327510917,0.501672241,300,916,598,?a
+?b  spouse  ?a   ,?a  spouse  ?b,0.782707622,0.782707622,0.942465753,688,879,730,?a
+?b  child  ?a   ,?a  parent  ?b,0.35371179,0.211074919,0.278350515,324,1535,1164,?b
+?b  successor  ?a   ,?a  parent  ?b,0.104803493,0.280701754,0.524590164,96,342,183,?b
+?a  predecessor  ?b   ,?a  parent  ?b,0.111353712,0.295652174,0.53125,102,345,192,?b
+?a  mother  ?b   ,?a  parent  ?b,0.327510917,0.751879699,0.906344411,300,399,331,?b
+?a  father  ?b   ,?a  parent  ?b,0.425764192,0.726256983,0.926365796,390,537,421,?b
+?b  mother  ?a   ,?a  child  ?b,0.101628664,0.390977444,0.641975309,156,399,243,?b
+?a  successor  ?b   ,?a  child  ?b,0.080781759,0.362573099,0.532188841,124,342,233,?b
+?b  father  ?a   ,?a  child  ?b,0.125732899,0.359404097,0.696750903,193,537,277,?b
+?b  parent  ?a   ,?a  child  ?b,0.211074919,0.35371179,0.645418327,324,916,502,?b
+?b  predecessor  ?a   ,?a  child  ?b,0.079478827,0.353623188,0.537444934,122,345,227,?b
+?a  parent  ?b  ?b  successor  ?a   ,?a  predecessor  ?b,0.208695652,0.75,0.96,72,96,75,?b
+?a  predecessor  ?f  ?b  spouse  ?f   ,?a  predecessor  ?b,0.023188406,0.029962547,0.170212766,8,267,47,?b
+?a  father  ?f  ?b  spouse  ?f   ,?a  predecessor  ?b,0.028985507,0.024154589,0.277777778,10,414,36,?b
+?a  father  ?b  ?b  successor  ?a   ,?a  predecessor  ?b,0.208695652,0.757894737,0.972972973,72,95,74,?b
+?b  spouse  ?f  ?f  successor  ?a   ,?a  predecessor  ?b,0.028985507,0.038167939,0.217391304,10,262,46,?b
+?a  mother  ?f  ?b  spouse  ?f   ,?a  predecessor  ?b,0.220289855,0.235294118,0.466257669,76,323,163,?b
+?f  child  ?a  ?b  spouse  ?f   ,?a  predecessor  ?b,0.162318841,0.038514443,0.140703518,56,1454,398,?b
+?b  child  ?a  ?b  successor  ?a   ,?a  predecessor  ?b,0.266666667,0.741935484,0.958333333,92,124,96,?b
+?b  child  ?f  ?f  predecessor  ?a   ,?a  predecessor  ?b,0.052173913,0.060606061,0.100558659,18,297,179,?b
+?a  parent  ?f  ?b  spouse  ?f   ,?a  predecessor  ?b,0.231884058,0.114122682,0.406091371,80,701,197,?b
+?b  child  ?f  ?a  successor  ?f   ,?a  predecessor  ?b,0.049275362,0.056856187,0.106918239,17,299,159,?b
+?a  spouse  ?b  ?b  successor  ?a   ,?a  predecessor  ?b,0.011594203,0.571428571,1,4,7,4,?b
+?a  father  ?f  ?f  spouse  ?b   ,?a  predecessor  ?b,0.020289855,0.01686747,0.21875,7,415,32,?b
+?a  parent  ?f  ?f  spouse  ?b   ,?a  predecessor  ?b,0.208695652,0.101265823,0.409090909,72,711,176,?b
+?e  spouse  ?b  ?e  successor  ?a   ,?a  predecessor  ?b,0.028985507,0.035971223,0.222222222,10,278,45,?b
+?f  father  ?b  ?a  successor  ?f   ,?a  predecessor  ?b,0.046376812,0.077294686,0.111111111,16,207,144,?b
+?a  predecessor  ?f  ?f  spouse  ?b   ,?a  predecessor  ?b,0.023188406,0.027586207,0.170212766,8,290,47,?b
+?a  mother  ?e  ?e  spouse  ?b   ,?a  predecessor  ?b,0.205797101,0.222570533,0.47972973,71,319,148,?b
+?b  father  ?a  ?b  predecessor  ?a   ,?a  successor  ?b,0.210526316,0.765957447,0.947368421,72,94,76,?a
+?b  parent  ?a  ?b  predecessor  ?a   ,?a  successor  ?b,0.210526316,0.705882353,0.96,72,102,75,?a
+?b  parent  ?f  ?a  predecessor  ?f   ,?a  successor  ?b,0.049707602,0.066666667,0.103658537,17,255,164,?a
+?f  parent  ?b  ?a  successor  ?f   ,?a  predecessor  ?b,0.049275362,0.046831956,0.111111111,17,363,153,?b
+?b  parent  ?f  ?f  spouse  ?a   ,?a  successor  ?b,0.204678363,0.098452883,0.421686747,70,711,166,?a
+?b  parent  ?f  ?a  spouse  ?f   ,?a  successor  ?b,0.210526316,0.102710414,0.404494382,72,701,178,?a
+?b  mother  ?a  ?b  predecessor  ?a   ,?a  successor  ?b,0.032163743,0.785714286,1,11,14,11,?a
+?e  child  ?a  ?e  spouse  ?b   ,?a  predecessor  ?b,0.162318841,0.037634409,0.146214099,56,1488,383,?b
+?b  father  ?f  ?a  spouse  ?f   ,?a  successor  ?b,0.032163743,0.026570048,0.323529412,11,414,34,?a
+?b  father  ?f  ?f  spouse  ?a   ,?a  successor  ?b,0.023391813,0.019277108,0.258064516,8,415,31,?a
+?b  father  ?f  ?a  predecessor  ?f   ,?a  successor  ?b,0.046783626,0.065306122,0.103225806,16,245,155,?a
+?b  mother  ?f  ?a  spouse  ?f   ,?a  successor  ?b,0.201754386,0.213622291,0.46,69,323,150,?a
+?b  predecessor  ?f  ?f  spouse  ?a   ,?a  successor  ?b,0.029239766,0.034482759,0.212765957,10,290,47,?a
+?b  mother  ?f  ?f  spouse  ?a   ,?a  successor  ?b,0.198830409,0.213166144,0.475524476,68,319,143,?a
+?f  child  ?b  ?a  spouse  ?f   ,?a  successor  ?b,0.152046784,0.035763411,0.132992327,52,1454,391,?a
+?e  spouse  ?a  ?e  successor  ?b   ,?a  successor  ?b,0.032163743,0.039568345,0.234042553,11,278,47,?a
+?e  child  ?b  ?e  spouse  ?a   ,?a  successor  ?b,0.152046784,0.034946237,0.142857143,52,1488,364,?a
+?b  child  ?a  ?b  successor  ?a   ,?a  father  ?b,0.108007449,0.467741935,0.878787879,58,124,66,?a
+?a  parent  ?b  ?a  predecessor  ?b   ,?a  father  ?b,0.121042831,0.637254902,0.866666667,65,102,75,?a
+?a  parent  ?b  ?b  successor  ?a   ,?a  father  ?b,0.124767225,0.697916667,0.87012987,67,96,77,?a
+?b  predecessor  ?f  ?a  spouse  ?f   ,?a  successor  ?b,0.029239766,0.037453184,0.227272727,10,267,44,?a
+?f  child  ?a  ?b  spouse  ?f   ,?a  father  ?b,0.25698324,0.094910591,0.396551724,138,1454,348,?a
+?a  spouse  ?f  ?f  successor  ?b   ,?a  successor  ?b,0.032163743,0.041984733,0.244444444,11,262,45,?a
+?b  child  ?a  ?a  predecessor  ?b   ,?a  father  ?b,0.096834264,0.426229508,0.896551724,52,122,58,?a
+?a  mother  ?e  ?e  spouse  ?b   ,?a  father  ?b,0.43575419,0.73354232,0.917647059,234,319,255,?a
+?a  mother  ?f  ?b  spouse  ?f   ,?a  father  ?b,0.418994413,0.696594427,0.889328063,225,323,253,?a
+?f  predecessor  ?b  ?a  predecessor  ?f   ,?a  father  ?b,0.026070764,0.051851852,0.102941176,14,270,136,?a
+?a  parent  ?f  ?b  spouse  ?f   ,?a  father  ?b,0.422718808,0.32382311,0.407540395,227,701,557,?a
+?a  father  ?f  ?b  marriedTo  ?f   ,?a  mother  ?b,0.010025063,0.666666667,0.8,4,6,5,?a
+?b  spouse  ?f  ?f  successor  ?a   ,?a  mother  ?b,0.170426065,0.259541985,0.450331126,68,262,151,?a
+?a  parent  ?f  ?f  spouse  ?b   ,?a  father  ?b,0.433891993,0.327707454,0.413854352,233,711,563,?a
+?f  marriedTo  ?b  ?a  parent  ?f   ,?a  mother  ?b,0.010025063,0.4,0.5,4,10,8,?a
+?a  father  ?f  ?b  spouse  ?f   ,?a  mother  ?b,0.586466165,0.565217391,0.767213115,234,414,305,?a
+?a  parent  ?f  ?b  spouse  ?f   ,?a  mother  ?b,0.528822055,0.300998573,0.404990403,211,701,521,?a
+?a  father  ?f  ?f  marriedTo  ?b   ,?a  mother  ?b,0.012531328,0.833333333,1,5,6,5,?a
+?e  predecessor  ?b  ?e  successor  ?a   ,?a  father  ?b,0.029795158,0.055944056,0.108843537,16,286,147,?a
+?a  predecessor  ?e  ?e  spouse  ?b   ,?a  mother  ?b,0.19047619,0.262068966,0.477987421,76,290,159,?a
+?e  spouse  ?b  ?e  successor  ?a   ,?a  mother  ?b,0.172932331,0.248201439,0.450980392,69,278,153,?a
+?a  predecessor  ?f  ?b  spouse  ?f   ,?a  mother  ?b,0.177944862,0.265917603,0.470198675,71,267,151,?a
+?a  father  ?f  ?f  spouse  ?b   ,?a  mother  ?b,0.563909774,0.542168675,0.742574257,225,415,303,?a
+?a  parent  ?f  ?f  spouse  ?b   ,?a  mother  ?b,0.543859649,0.305203938,0.413333333,217,711,525,?a
+?f  gender  ?b  ?a  successor  ?f   ,?a  gender  ?b,0.093567251,0.408163265,0.792079208,80,196,101,?a
+?e  child  ?a  ?e  spouse  ?b   ,?a  mother  ?b,0.325814536,0.087365591,0.4,130,1488,325,?a
+?f  gender  ?b  ?a  predecessor  ?f   ,?a  gender  ?b,0.085380117,0.405555556,0.811111111,73,180,90,?a
+?f  gender  ?b  ?a  mother  ?f   ,?a  gender  ?b,0.10877193,0.273529412,0.376518219,93,340,247,?a
+?e  gender  ?b  ?e  successor  ?a   ,?a  gender  ?b,0.094736842,0.43315508,0.81,81,187,100,?a
+?a  child  ?f  ?f  gender  ?b   ,?a  gender  ?b,0.190643275,0.461756374,0.617424242,163,353,264,?a
+?f  gender  ?b  ?a  parent  ?f   ,?a  gender  ?b,0.305263158,0.365034965,0.50483559,261,715,517,?a
+?a  father  ?f  ?f  gender  ?b   ,?a  gender  ?b,0.205847953,0.411214953,0.590604027,176,428,298,?a
+?e  child  ?a  ?e  spouse  ?b   ,?a  father  ?b,0.253258845,0.091397849,0.388571429,136,1488,350,?a
+?e  father  ?a  ?e  gender  ?b   ,?a  gender  ?b,0.194152047,0.466292135,0.594982079,166,356,279,?a
+?e  gender  ?b  ?e  predecessor  ?a   ,?a  gender  ?b,0.083040936,0.377659574,0.806818182,71,188,88,?a
+?f  mother  ?a  ?b  successor  ?f   ,?a  spouse  ?b,0.075085324,0.333333333,0.434210526,66,198,152,?a
+?b  child  ?f  ?f  predecessor  ?a   ,?a  spouse  ?b,0.061433447,0.181818182,0.253521127,54,297,213,?a
+?b  child  ?f  ?f  father  ?a   ,?a  spouse  ?b,0.119453925,0.37366548,0.466666667,105,281,225,?a
+?f  parent  ?a  ?b  successor  ?f   ,?a  spouse  ?b,0.077360637,0.187327824,0.245487365,68,363,277,?a
+?b  child  ?f  ?f  mother  ?a   ,?a  spouse  ?b,0.109215017,0.369230769,0.48,96,260,200,?a
+?b  child  ?f  ?a  successor  ?f   ,?a  spouse  ?b,0.056882821,0.16722408,0.23923445,50,299,209,?a
+?b  child  ?f  ?f  parent  ?a   ,?a  spouse  ?b,0.221843003,0.375722543,0.476772616,195,519,409,?a
+?a  child  ?f  ?b  successor  ?f   ,?a  spouse  ?b,0.053469852,0.157190635,0.192622951,47,299,244,?a
+?a  child  ?f  ?b  child  ?f   ,?a  spouse  ?b,0.200227531,0.266263238,0.331450094,176,661,531,?a
+?a  child  ?f  ?f  father  ?b   ,?a  spouse  ?b,0.118316268,0.370106762,0.466367713,104,281,223,?a
+?e  child  ?a  ?e  gender  ?b   ,?a  gender  ?b,0.219883041,0.16362054,0.628762542,188,1149,299,?a
+?e  gender  ?b  ?e  parent  ?a   ,?a  gender  ?b,0.287719298,0.385579937,0.502040816,246,638,490,?a
+?a  child  ?f  ?f  predecessor  ?b   ,?a  spouse  ?b,0.059158134,0.175084175,0.210526316,52,297,247,?a
+?e  parent  ?b  ?a  successor  ?e   ,?a  spouse  ?b,0.080773606,0.195592287,0.336492891,71,363,211,?a
+?f  child  ?a  ?b  spouse  ?f   ,?a  mother  ?b,0.303258145,0.083218707,0.38170347,121,1454,317,?a
+?a  child  ?f  ?f  parent  ?b   ,?a  spouse  ?b,0.226393629,0.383429672,0.477218225,199,519,417,?a
+?a  child  ?f  ?f  mother  ?b   ,?a  spouse  ?b,0.124004551,0.419230769,0.509345794,109,260,214,?a
+?e  parent  ?b  ?e  predecessor  ?a   ,?a  spouse  ?b,0.088737201,0.214876033,0.357798165,78,363,218,?a
+?e  mother  ?a  ?e  predecessor  ?b   ,?a  spouse  ?b,0.078498294,0.359375,0.456953642,69,192,151,?a
+?e  father  ?a  ?e  parent  ?b   ,?a  spouse  ?b,0.224118316,0.312698413,0.472422062,197,630,417,?a
+?e  parent  ?a  ?e  parent  ?b   ,?a  spouse  ?b,0.427758817,0.280597015,0.409586057,376,1340,918,?a
+?e  father  ?b  ?e  mother  ?a   ,?a  spouse  ?b,0.221843003,0.711678832,0.955882353,195,274,204,?a
+?e  father  ?a  ?e  mother  ?b   ,?a  spouse  ?b,0.213879408,0.686131387,0.930693069,188,274,202,?a
+?e  mother  ?b  ?e  predecessor  ?a   ,?a  spouse  ?b,0.084186576,0.385416667,0.637931034,74,192,116,?a
+?a  father  ?b  ?b  successor  ?a   ,?a  parent  ?b,0.073144105,0.705263158,0.957142857,67,95,70,?b
+?b  child  ?a  ?a  predecessor  ?b   ,?a  parent  ?b,0.057860262,0.43442623,0.602272727,53,122,88,?b
+?e  mother  ?b  ?a  successor  ?e   ,?a  spouse  ?b,0.077360637,0.343434343,0.591304348,68,198,115,?a
+?b  child  ?a  ?b  successor  ?a   ,?a  parent  ?b,0.06441048,0.475806452,0.670454545,59,124,88,?b
+?e  gender  ?b  ?e  mother  ?a   ,?a  gender  ?b,0.100584795,0.317343173,0.373913043,86,271,230,?a
+?e  mother  ?b  ?e  parent  ?a   ,?a  spouse  ?b,0.212741752,0.352165725,0.47826087,187,531,391,?a
+?f  successor  ?a  ?b  successor  ?f   ,?a  parent  ?b,0.017467249,0.053511706,0.111888112,16,299,143,?b
+?e  mother  ?a  ?e  parent  ?b   ,?a  spouse  ?b,0.209328783,0.346516008,0.476683938,184,531,386,?a
+?e  father  ?b  ?e  parent  ?a   ,?a  spouse  ?b,0.229806598,0.320634921,0.482100239,202,630,419,?a
+?a  predecessor  ?f  ?b  spouse  ?f   ,?a  parent  ?b,0.07860262,0.269662921,0.447204969,72,267,161,?b
+?a  mother  ?f  ?b  spouse  ?f   ,?a  parent  ?b,0.236899563,0.671826625,0.868,217,323,250,?b
+?a  father  ?f  ?b  spouse  ?f   ,?a  parent  ?b,0.254366812,0.562801932,0.829181495,233,414,281,?b
+?e  parent  ?a  ?e  predecessor  ?b   ,?a  spouse  ?b,0.07963595,0.192837466,0.253623188,70,363,276,?a
+?a  predecessor  ?b  ?b  successor  ?a   ,?a  parent  ?b,0.07860262,0.288,0.537313433,72,250,134,?b
+?a  father  ?b  ?a  predecessor  ?b   ,?a  parent  ?b,0.070960699,0.691489362,0.955882353,65,94,68,?b
+?b  spouse  ?f  ?f  successor  ?a   ,?a  parent  ?b,0.076419214,0.267175573,0.466666667,70,262,150,?b
+?b  child  ?f  ?f  successor  ?a   ,?a  parent  ?b,0.024017467,0.08627451,0.106280193,22,255,207,?b
+?a  father  ?f  ?f  spouse  ?b   ,?a  parent  ?b,0.247816594,0.546987952,0.796491228,227,415,285,?b
+?a  predecessor  ?f  ?f  spouse  ?b   ,?a  parent  ?b,0.087336245,0.275862069,0.43956044,80,290,182,?b
+?f  predecessor  ?b  ?a  predecessor  ?f   ,?a  parent  ?b,0.018558952,0.062962963,0.118055556,17,270,144,?b
+?e  predecessor  ?b  ?e  successor  ?a   ,?a  parent  ?b,0.018558952,0.059440559,0.114864865,17,286,148,?b
+?e  spouse  ?b  ?e  successor  ?a   ,?a  parent  ?b,0.07860262,0.258992806,0.43902439,72,278,164,?b
+?b  child  ?f  ?a  predecessor  ?f   ,?a  parent  ?b,0.02510917,0.085820896,0.104545455,23,268,220,?b
+?a  mother  ?e  ?e  spouse  ?b   ,?a  parent  ?b,0.230349345,0.661442006,0.864754098,211,319,244,?b
+?a  successor  ?f  ?f  type  ?b   ,?a  type  ?b,0.090467517,0.696261682,1,149,214,149,?a
+?a  predecessor  ?f  ?f  type  ?b   ,?a  type  ?b,0.090467517,0.716346154,1,149,208,149,?a
+?f  child  ?a  ?b  spouse  ?f   ,?a  parent  ?b,0.26419214,0.166437414,0.263904035,242,1454,917,?b
+?e  predecessor  ?a  ?e  type  ?b   ,?a  type  ?b,0.095324833,0.716894977,1,157,219,157,?a
+?e  successor  ?a  ?e  type  ?b   ,?a  type  ?b,0.083788707,0.696969697,1,138,198,138,?a
+?e  child  ?a  ?e  spouse  ?b   ,?a  parent  ?b,0.26419214,0.162634409,0.248459959,242,1488,974,?b
+?e  mother  ?a  ?e  type  ?b   ,?a  type  ?b,0.10564663,0.682352941,1,174,255,174,?a
+?a  child  ?f  ?f  type  ?b   ,?a  type  ?b,0.168184578,0.71025641,1,277,390,277,?a
+?b  predecessor  ?a  ?a  successor  ?b   ,?a  child  ?b,0.059934853,0.368,0.550898204,92,250,167,?b
+?a  parent  ?f  ?f  type  ?b   ,?a  type  ?b,0.217364906,0.706114398,1,358,507,358,?a
+?b  parent  ?a  ?a  successor  ?b   ,?a  child  ?b,0.038436482,0.614583333,0.855072464,59,96,69,?b
+?b  father  ?a  ?a  successor  ?b   ,?a  child  ?b,0.037785016,0.610526316,0.852941176,58,95,68,?b
+?e  father  ?a  ?e  type  ?b   ,?a  type  ?b,0.137826351,0.687878788,1,227,330,227,?a
+?b  father  ?a  ?b  predecessor  ?a   ,?a  child  ?b,0.033876221,0.553191489,0.8125,52,94,64,?b
+?a  spouse  ?f  ?f  type  ?b   ,?a  type  ?b,0.258652095,0.730703259,1,426,583,426,?a
+?b  father  ?a  ?b  parent  ?a   ,?a  child  ?b,0.091856678,0.361538462,0.698019802,141,390,202,?b
+?b  parent  ?a  ?b  predecessor  ?a   ,?a  child  ?b,0.034527687,0.519607843,0.815384615,53,102,65,?b
+?a  parent  ?f  ?b  spouse  ?f   ,?a  parent  ?b,0.459606987,0.600570613,0.860940695,421,701,489,?b
+?b  predecessor  ?f  ?f  spouse  ?a   ,?a  child  ?b,0.036482085,0.193103448,0.275862069,56,290,203,?b
+?a  child  ?f  ?b  successor  ?f   ,?a  child  ?b,0.014332248,0.073578595,0.109452736,22,299,201,?b
+?b  predecessor  ?f  ?a  spouse  ?f   ,?a  child  ?b,0.036482085,0.209737828,0.302702703,56,267,185,?b
+?a  child  ?f  ?b  predecessor  ?f   ,?a  child  ?b,0.013680782,0.078358209,0.102941176,21,268,204,?b
+?e  spouse  ?a  ?e  type  ?b   ,?a  type  ?b,0.258652095,0.723259762,1,426,589,426,?a
+?b  parent  ?f  ?a  spouse  ?f   ,?a  child  ?b,0.158306189,0.346647646,0.534065934,243,701,455,?b
+?b  parent  ?f  ?f  spouse  ?a   ,?a  child  ?b,0.158306189,0.341772152,0.529411765,243,711,459,?b
+?b  mother  ?f  ?a  spouse  ?f   ,?a  child  ?b,0.08534202,0.405572755,0.617924528,131,323,212,?b
+?b  mother  ?f  ?f  spouse  ?a   ,?a  child  ?b,0.078827362,0.379310345,0.608040201,121,319,199,?b
+?b  father  ?f  ?f  spouse  ?a   ,?a  child  ?b,0.090553746,0.334939759,0.505454545,139,415,275,?b
+?b  father  ?f  ?a  spouse  ?f   ,?a  child  ?b,0.088599349,0.328502415,0.509363296,136,414,267,?b
+?e  child  ?a  ?e  type  ?b   ,?a  type  ?b,0.432908318,0.741935484,1,713,961,713,?a
+?a  parent  ?f  ?f  spouse  ?b   ,?a  parent  ?b,0.459606987,0.592123769,0.848790323,421,711,496,?b
+?a  child  ?e  ?e  predecessor  ?b   ,?a  child  ?b,0.013680782,0.070707071,0.102941176,21,297,204,?b
+?a  mother  ?f  ?f  type  ?b   ,?a  type  ?b,0.123254402,0.727598566,1,203,279,203,?a
+?e  spouse  ?a  ?e  successor  ?b   ,?a  child  ?b,0.033876221,0.18705036,0.263959391,52,278,197,?b
+?a  spouse  ?e  ?e  successor  ?b   ,?a  child  ?b,0.033876221,0.198473282,0.282608696,52,262,184,?b
+?f  parent  ?a  ?b  successor  ?f   ,?a  child  ?b,0.014332248,0.060606061,0.111111111,22,363,198,?b
+?a  child  ?e  ?e  successor  ?b   ,?a  child  ?b,0.014332248,0.08627451,0.110552764,22,255,199,?b
+?e  parent  ?a  ?e  predecessor  ?b   ,?a  child  ?b,0.014983713,0.063360882,0.116161616,23,363,198,?b
+?e  hasSpouse  ?b  ?e  predecessor  ?a   ,?a  hasSpouse  ?b,0.045894952,0.367346939,0.483870968,90,245,186,?a
+?f  hasSpouse  ?b  ?a  predecessor  ?f   ,?a  hasSpouse  ?b,0.044875064,0.365145228,0.475675676,88,241,185,?a
+?f  hasSpouse  ?b  ?a  mother  ?f   ,?a  hasSpouse  ?b,0.108618052,0.669811321,0.926086957,213,318,230,?a
+?a  father  ?f  ?f  hasSpouse  ?b   ,?a  hasSpouse  ?b,0.10963794,0.540201005,0.746527778,215,398,288,?a
+?e  father  ?a  ?e  hasSpouse  ?b   ,?a  hasSpouse  ?b,0.099949006,0.544444444,0.736842105,196,360,266,?a
+?f  hasSpouse  ?b  ?a  parent  ?f   ,?a  hasSpouse  ?b,0.164711882,0.606003752,0.79950495,323,533,404,?a
+?e  hasSpouse  ?b  ?e  mother  ?a   ,?a  hasSpouse  ?b,0.095869454,0.709433962,0.917073171,188,265,205,?a
+?f  hasSpouse  ?b  ?a  successor  ?f   ,?a  hasSpouse  ?b,0.044875064,0.371308017,0.480874317,88,237,183,?a
+?e  parent  ?a  ?e  type  ?b   ,?a  type  ?b,0.256830601,0.708542714,1,423,597,423,?a
+?e  child  ?b  ?e  spouse  ?a   ,?a  child  ?b,0.324429967,0.334677419,0.334677419,498,1488,1488,?b
+?a  child  ?f  ?f  hasSpouse  ?b   ,?a  hasSpouse  ?b,0.112697603,0.34,0.452868852,221,650,488,?a
+?e  hasSpouse  ?b  ?e  successor  ?a   ,?a  hasSpouse  ?b,0.045385008,0.381974249,0.486338798,89,233,183,?a
+?f  child  ?b  ?a  spouse  ?f   ,?a  child  ?b,0.324429967,0.342503439,0.342503439,498,1454,1454,?b
+?a  father  ?f  ?f  type  ?b   ,?a  type  ?b,0.156041287,0.687165775,1,257,374,257,?a
+?e  hasSpouse  ?b  ?e  spouse  ?a   ,?a  hasSpouse  ?b,0.254462009,0.785826772,1,499,635,499,?a
+?f  hasSpouse  ?b  ?a  spouse  ?f   ,?a  hasSpouse  ?b,0.254971953,0.793650794,1,500,630,500,?a
+?e  hasSpouse  ?b  ?e  parent  ?a   ,?a  hasSpouse  ?b,0.200917899,0.623417722,0.809034908,394,632,487,?a
+?e  child  ?a  ?e  hasSpouse  ?b   ,?a  hasSpouse  ?b,0.134625191,0.270214944,0.294314381,264,977,897,?a
