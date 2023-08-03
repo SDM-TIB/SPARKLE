@@ -1,11 +1,10 @@
-Body,Head,Head Coverage,Std_Confidence,PCA Confidence,Positive Examples,Body size,PCA Body size,Functional variable
-?b  successor  ?a  ?a  successor  ?b   ,?a  predecessor  ?b,0.011173184,1.0,1.0,4,4,4,?b
-?f  name  ?a  ?b  name  ?f   ,?a  name  ?b,0.164102564,0.96969697,1.0,96,99,96,?a
-?f  name  ?b  ?a  name  ?f   ,?a  name  ?b,0.169230769,1.0,1.0,99,99,99,?a
-?a  father  ?f  ?b  name  ?f   ,?a  father  ?b,0.028520499,1.0,1.0,16,16,16,?a
+Body,Head,Head Coverage,Std_Confidence,PCA_Confidence,Positive Examples,Body size,PCA Body size,Functional variable
+?f  mother  ?b  ?a  name  ?f   ,?a  mother  ?b,0.102941176,0.954545455,0.954545455,42,44,44,?a
+?a  mother  ?f  ?b  name  ?f   ,?a  mother  ?b,0.164215686,0.957142857,0.957142857,67,70,70,?a
 ?f  father  ?b  ?a  name  ?f   ,?a  father  ?b,0.131907308,0.973684211,0.973684211,74,76,76,?a
-?f  gender  ?b  ?a  name  ?f   ,?a  gender  ?b,0.088565022,0.975308642,1.0,79,81,79,?a
+?b  name  ?f  ?a  parent  ?f   ,?a  parent  ?b,0.095137421,0.947368421,0.967741935,90,95,93,?b
 ?a  name  ?f  ?f  parent  ?b   ,?a  parent  ?b,0.122621564,0.966666667,0.966666667,116,120,120,?b
+?b  name  ?f  ?a  spouse  ?f   ,?a  spouse  ?b,0.09017341,0.939759036,0.939759036,78,83,83,?a
 ?a  name  ?e  ?e  spouse  ?b   ,?a  spouse  ?b,0.092485549,0.963855422,0.975609756,80,83,82,?a
-?a  name  ?f  ?f  type  ?b   ,?a  type  ?b,0.046826864,0.974358974,1.0,76,78,76,?a
 ?f  child  ?b  ?a  name  ?f   ,?a  child  ?b,0.131962865,0.990049751,0.990049751,199,201,201,?b
+?f  hasSpouse  ?b  ?a  name  ?f   ,?a  hasSpouse  ?b,0.038900415,0.949367089,0.961538462,75,79,78,?a
