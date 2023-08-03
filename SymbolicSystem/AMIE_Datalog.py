@@ -92,8 +92,8 @@ def load_graph(file_name):
 
 
 # #### List of Terms considered in Datalog program
-# term_graph = pd.read_csv('AMIERules/Family/terms_Family.csv')
-term_graph = pd.read_csv('AMIERules/FrenchRoyalty/terms_FrenchRoyalty.csv')
+term_graph = pd.read_csv('AMIERules/Family/terms_Family.csv')
+# term_graph = pd.read_csv('AMIERules/FrenchRoyalty/terms_FrenchRoyalty.csv')
 pyDatalog.create_terms(','.join(term_graph.term.tolist()))
 
 
@@ -127,10 +127,13 @@ def build_datalog_model(data, rule_list):
 
 def reasoning_datalog(data, head_dict, rule_list):
     build_datalog_model(data, rule_list)
+    print('model done')
     list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'])
     #     === Query Datalog model ===
     for rule_h, val in head_dict.items():
+        print('query', rule_h)
         deduced_link = pyDatalog.ask(rule_h).answers
+        print(len(deduced_link), 'ask')
         #         === Creating DataFrame with deduced links ===
         for i in range(len(deduced_link)):
             if len(deduced_link[i]) == 2:
@@ -138,6 +141,7 @@ def reasoning_datalog(data, head_dict, rule_list):
             else:
                 x = {'s': [deduced_link[i][0]], 'p': val[0], 'o': val[1]}
             list_deduced_link = pd.concat([list_deduced_link, pd.DataFrame(data=x)])
+        print('transformed')
     #     === enriching original graph with the new links deduced ===
     list_deduced_link = list_deduced_link.merge(data, how='outer', indicator=True).loc[
         lambda x: x['_merge'] == 'left_only']  # , on='DrugName'
