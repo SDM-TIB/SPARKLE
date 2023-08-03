@@ -1,4 +1,4 @@
-Body,Head,Head Coverage,Std Confidence,PCA Confidence,Positive Examples,Body size,PCA Body size,Functional variable
+Body,Head,Head Coverage,Std_Confidence,PCA Confidence,Positive Examples,Body size,PCA Body size,Functional variable
 ?b  mother  ?a   ,?a  successor  ?b,0.031073446,0.026960784,0.423076923,11,408,26,?a
 ?b  father  ?a   ,?a  successor  ?b,0.288135593,0.181818182,0.490384615,102,561,208,?a
 ?b  parent  ?a   ,?a  successor  ?b,0.31920904,0.119450317,0.478813559,113,946,236,?a
