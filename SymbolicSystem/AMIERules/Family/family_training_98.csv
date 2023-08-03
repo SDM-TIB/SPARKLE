@@ -1,0 +1,9 @@
+Body,Head,Head_Coverage,Std_Confidence,PCA_Confidence,Positive_Examples,Body_size,PCA_Body_size,Functional_variable,F1_Score
+?b  wife  ?a   ,?a  husband  ?b,0.794899044,0.828349945,0.982917214,748,903,761,?b,0.8789659226299452
+?a  brother  ?f  ?b  mother  ?f   ,?a  son  ?b,0.352727273,0.798353909,0.843478261,582,729,690,?a,0.497435897729783
+?b  mother  ?f  ?a  sister  ?f   ,?a  daughter  ?b,0.3281366,0.797833935,0.827715356,442,554,534,?b,0.4699627859359345
+?b  father  ?f  ?a  sister  ?f   ,?a  daughter  ?b,0.341499629,0.83032491,0.856610801,460,554,537,?b,0.4883227178631487
+?f  daughter  ?b  ?a  sister  ?f   ,?a  daughter  ?b,0.474387528,0.799749687,0.799749687,639,799,799,?b,0.5955265611399692
+?a  sister  ?f  ?f  son  ?b   ,?a  daughter  ?b,0.519673348,0.811123986,0.843373494,700,863,830,?b,0.6430868165885644
+?b  brother  ?f  ?a  daughter  ?f   ,?a  niece  ?b,0.397996357,0.798173516,0.810760668,874,1095,1078,?b,0.533903481988676
+?a  brother  ?f  ?b  sister  ?f   ,?a  brother  ?b,0.402232487,0.815132605,0.834664537,1045,1282,1252,?b,0.542857143341649

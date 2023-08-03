@@ -11,8 +11,6 @@ def load_AMIE_rule(file_name):
     result = pd.read_csv(file_name)  # , delimiter='\t'
     result.replace('type', 'Type', regex=True, inplace=True)
     result.Body = result.Body.str.rstrip()
-    # result.replace('>', '', regex=True, inplace=True)
-    # result.replace('<', '', regex=True, inplace=True)
     return result
 
 
@@ -82,12 +80,9 @@ def create_IDB(result):
 
 
 def load_graph(file_name):
-    data = pd.read_csv(file_name, delimiter='\t', header=None)  #
+    data = pd.read_csv(file_name, delimiter='\t', header=None, dtype=str)  #
     data.columns = ['s', 'p', 'o']
     data.replace('type', 'Type', regex=True, inplace=True)
-    # data.replace('>', '', regex=True, inplace=True)
-    # data.replace('<', '', regex=True, inplace=True)
-    # data.replace(' .', '', regex=True, inplace=True)
     return data
 
 
@@ -128,7 +123,7 @@ def build_datalog_model(data, rule_list):
 def reasoning_datalog(data, head_dict, rule_list):
     build_datalog_model(data, rule_list)
     print('model done')
-    list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'])
+    list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'], dtype=str)
     #     === Query Datalog model ===
     for rule_h, val in head_dict.items():
         print('query', rule_h)
