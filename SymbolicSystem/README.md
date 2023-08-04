@@ -18,7 +18,7 @@ python .\Datalog_Terms.py ../KG/Family/family_training_triples.tsv AMIERules/Fam
 ```
 ## 4. Running example for *Datalog program*: *AMIE_Datalog*
 ```python
-python .\AMIE_Datalog.py AMIERules/FrenchRoyalty/FrenchRoyalty_AMIE_Rules.csv ../KG/FrenchRoyalty/french_training.tsv deduced.csv enriched.csv
+python .\AMIE_Datalog.py ./AMIERules/Family/family_training_99.csv ../KG/Family/family_training_triples.tsv ./AMIERules/Family/Deduced/ 99
 ```
 ## 5. Running example for creating subset of AMIE rules given a percentile *CreateSubsetAMIE_Rule*
 ```python
