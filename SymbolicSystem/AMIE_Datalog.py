@@ -120,12 +120,11 @@ def build_datalog_model(data, rule_list):
 # """)  # rule_list
 
 
-def reasoning_datalog(data, head_dict, rule_list):
+def reasoning_datalog(data, head_dict, rule_list, path):
     build_datalog_model(data, rule_list)
-    print('model done')
-    list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'], dtype=str)
     #     === Query Datalog model ===
     for rule_h, val in head_dict.items():
+        list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'], dtype=str)
         print('query', rule_h)
         deduced_link = pyDatalog.ask(rule_h).answers
         print(len(deduced_link), 'ask')
@@ -137,10 +136,17 @@ def reasoning_datalog(data, head_dict, rule_list):
                 x = {'s': [deduced_link[i][0]], 'p': val[0], 'o': val[1]}
             list_deduced_link = pd.concat([list_deduced_link, pd.DataFrame(data=x)])
         print('transformed')
+        list_deduced_link.to_csv(path+rule_h+'.csv', index=None, header=None, sep='\t')
+
     #     === enriching original graph with the new links deduced ===
-    list_deduced_link = list_deduced_link.merge(data, how='outer', indicator=True).loc[
-        lambda x: x['_merge'] == 'left_only']  # , on='DrugName'
-    list_deduced_link = list_deduced_link.drop(columns=['_merge'])
+    list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'], dtype=str)
+    for rule_h, val in head_dict.items():
+        df = pd.read_csv(path + rule_h + '.csv', delimiter='\t', header=None, dtype=str)
+        df.columns = ['s', 'p', 'o']
+        list_deduced_link = pd.concat([list_deduced_link, df])
+        list_deduced_link = list_deduced_link.merge(data, how='outer', indicator=True).loc[lambda x: x['_merge'] == 'left_only']
+        list_deduced_link = list_deduced_link.drop(columns=['_merge'])
+
     graph_deduced = pd.concat([data, list_deduced_link])
     graph_deduced.drop_duplicates(keep='first', inplace=True)
     list_deduced_link.replace('Type', 'type', regex=True, inplace=True)
@@ -160,9 +166,9 @@ def main(*args):
     """List of Terms considered in Datalog program"""
     # create_terms(data, terms)
     """Reasoning Datalog program"""
-    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list)
-    list_deduced_link.to_csv(args[2], index=None, header=None, sep='\t')
-    graph_deduced.to_csv(args[3], index=None, header=None, sep='\t')
+    graph_deduced, list_deduced_link = reasoning_datalog(data, head_dict, rule_list, args[2])
+    list_deduced_link.to_csv(args[2]+'deduced_'+args[3]+'.csv', index=None, header=None, sep='\t')
+    graph_deduced.to_csv(args[2]+'enriched_'+args[3]+'.csv', index=None, header=None, sep='\t')
 
 
 if __name__ == '__main__':
