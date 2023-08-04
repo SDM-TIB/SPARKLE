@@ -8,7 +8,8 @@ import sys
 
 def subset_AMIE_rule(percentile, path, f_name):
     result = pd.read_csv(path + f_name+ '.csv')
-    df = result.loc[result.Std_Confidence>np.percentile(result.Std_Confidence.to_list(), int(percentile))]
+    result = result.loc[result.PCA_Confidence<1]
+    df = result.loc[result.Std_Confidence>np.percentile(result.Std_Confidence.to_list(), float(percentile))]
     df.to_csv(path+f_name+'_'+percentile+'.csv', index=None)
 
 
