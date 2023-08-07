@@ -1,0 +1,15 @@
+Body,Head,Head_Coverage,Std_Confidence,PCA_Confidence,Positive_Examples,Body_size,PCA_Body_size,Functional_variable
+?b  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.811529933,0.811529933,0.818791946,366,451,447,?b
+?b  isMarriedTo  ?a   ,?a  isMarriedTo  ?b,0.760553867,0.760553867,0.925225965,2252,2961,2434,?a
+?b  hasCapital  ?a   ,?a  isLocatedIn  ?b,0.018391634,0.58025193,0.58357172,1428,2461,2447,?a
+?a  isAffiliatedTo  ?b   ,?a  playsFor  ?b,0.683810077,0.584128915,0.647135431,171929,294334,265677,?a
+?a  playsFor  ?b   ,?a  isAffiliatedTo  ?b,0.584128915,0.683810077,0.74659875,171929,251428,230283,?a
+?f  isInterestedIn  ?b  ?a  isInterestedIn  ?f   ,?a  isInterestedIn  ?b,0.014563107,0.6,0.6,3,5,5,?a
+?a  dealsWith  ?b  ?b  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.206208426,0.830357143,0.837837838,93,112,111,?b
+?b  dealsWith  ?a  ?b  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.206208426,0.861111111,0.861111111,93,108,108,?b
+?a  hasChild  ?f  ?f  isPoliticianOf  ?b   ,?a  isPoliticianOf  ?b,0.308062575,0.573991031,0.863406408,512,892,593,?a
+?e  hasChild  ?a  ?e  isPoliticianOf  ?b   ,?a  isPoliticianOf  ?b,0.322503008,0.593576966,0.868719611,536,903,617,?a
+?e  hasGender  ?b  ?e  influences  ?a   ,?a  hasGender  ?b,0.028352123,0.729930012,0.859844811,1773,2429,2062,?a
+?f  hasGender  ?b  ?a  influences  ?f   ,?a  hasGender  ?b,0.023155033,0.682375118,0.82601255,1448,2122,1753,?a
+?e  hasChild  ?a  ?e  hasGender  ?b   ,?a  hasGender  ?b,0.022179579,0.534901658,0.689363817,1387,2593,2012,?a
+?a  hasChild  ?f  ?f  hasGender  ?b   ,?a  hasGender  ?b,0.020724394,0.53006135,0.69752422,1296,2445,1858,?a
