@@ -88,7 +88,8 @@ def load_graph(file_name):
 
 # #### List of Terms considered in Datalog program
 # term_graph = pd.read_csv('AMIERules/Family/terms_Family.csv')
-term_graph = pd.read_csv('AMIERules/FrenchRoyalty/terms_FrenchRoyalty.csv')
+# term_graph = pd.read_csv('AMIERules/FrenchRoyalty/terms_FrenchRoyalty.csv')
+term_graph = pd.read_csv('AMIERules/YAGO3-10/terms_YAGO3.csv')
 pyDatalog.create_terms(','.join(term_graph.term.tolist()))
 
 

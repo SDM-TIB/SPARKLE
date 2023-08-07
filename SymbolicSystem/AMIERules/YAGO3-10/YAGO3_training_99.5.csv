@@ -1,0 +1,2 @@
+Body,Head,Head_Coverage,Std_Confidence,PCA_Confidence,Positive_Examples,Body_size,PCA_Body_size,Functional_variable
+?b  dealsWith  ?a  ?b  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.206208426,0.861111111,0.861111111,93,108,108,?b
