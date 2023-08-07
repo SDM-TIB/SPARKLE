@@ -125,17 +125,17 @@ def reasoning_datalog(data, head_dict, rule_list, path):
     build_datalog_model(data, rule_list)
     #     === Query Datalog model ===
     for rule_h, val in head_dict.items():
-        list_deduced_link = pd.DataFrame(columns=['s', 'p', 'o'], dtype=str)
         print('query', rule_h)
         deduced_link = pyDatalog.ask(rule_h).answers
         print(len(deduced_link), 'ask')
         #         === Creating DataFrame with deduced links ===
-        for i in range(len(deduced_link)):
-            if len(deduced_link[i]) == 2:
-                x = {'s': [deduced_link[i][0]], 'p': val[0], 'o': deduced_link[i][1]}
-            else:
-                x = {'s': [deduced_link[i][0]], 'p': val[0], 'o': val[1]}
-            list_deduced_link = pd.concat([list_deduced_link, pd.DataFrame(data=x)])
+        if len(deduced_link[0]) == 2:
+            x = {'s': list(list(zip(*deduced_link))[0]), 'p': [val[0]] * len(deduced_link),
+                 'o': list(list(zip(*deduced_link))[1])}
+        else:
+            x = {'s': list(list(zip(*deduced_link))[0]), 'p': [val[0]] * len(deduced_link),
+                 'o': [val[1]] * len(deduced_link)}
+        list_deduced_link = pd.DataFrame(data=x, dtype=str)
         print('transformed')
         list_deduced_link.to_csv(path+rule_h+'.csv', index=None, header=None, sep='\t')
 
