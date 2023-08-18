@@ -20,9 +20,31 @@ git clone git@github.com:SDM-TIB/SPARKLE.git
 ```
 
 ## Running SPaRKLE
+Installing the dependencies for ```SPaRKLE``` create a virtual environment and 
+install the dependencies in the virtual environment created for SPaRKLE. To install the 
+required dependencies run the following command:
+```python
+pip install -r requirements.txt
+```
 
 ### Running Symbolic Learning (AMIE) for baseline and SPaRKLE approach inside ``AMIE_SPaRKLE`` folder
 Executing scripts to reproduce AMIE results by choosing ``Baseline`` or ``SPaRKLE`` folders and navigating to appropriate path.
+
+Provide configuration for executing
+```json
+{
+  "Type": "Baseline",
+  "KG": "FrenchRoyalty",
+  "prefix": "http://FrenchRoyalty.org/",
+  "rules_file": "french_training.csv",
+  "rdf_file": "french_training.nt"
+}
+```
+The user must supply a few options in the above JSON file to select the type of approach that has to be executed with added configuration details. <br>
+The parameter ``Type`` corresponds to the type of execution, i.e., ```Baseline``` or ```SPaRKLE```.<br>
+Secondly, parameter ``KG`` is the type of knowledge graph, i.e., ```FrenchRoyalty``` or ```Family``` or ```YAGO3```.<br>
+Nextly,```prefix```parameter is used for preprocessing the predictions results for readability.<br>
+Lastly, ```rules_file``` and ```rdf_file``` are the file names for premined rules and KG in the form of `NT`file.
 
 ```python
 python sparkle_amie.py
