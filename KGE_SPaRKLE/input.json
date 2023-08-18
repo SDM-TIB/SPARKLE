@@ -1,0 +1,6 @@
+{
+  "Type": "Baseline",
+  "KG": "./KG/FrenchRoyalty/",
+  "model": "[TransE, TransH]",
+  "path_to_results": "./Results/FrenchRoyalty/"
+}
