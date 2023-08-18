@@ -47,14 +47,17 @@ Nextly,```prefix```parameter is used for preprocessing the predictions results f
 Lastly, ```rules_file``` and ```rdf_file``` are the file names for premined rules and KG in the form of `NT`file.
 
 ```python
-python sparkle_amie.py
+python sparkle_amie.py 
 ```
-
-### Running Numerical Learning for baseline and SPaRKLE approach inside ``KGE`` folder
-
-
 
 ### Plots demonstrating SPaRKLE Effectiveness using Linear Regression analysis
 ![French Royalty](https://raw.githubusercontent.com/SDM-TIB/SPARKLE/main/images/FR_linear_regression.png "FrenchRoyalty_Linear_Regression_Analysis")
 ![Family KG](https://raw.githubusercontent.com/SDM-TIB/SPARKLE/main/images/Family_linear_regression.png "Family_Linear_Regression_Analysis")
 ![YAGO3-10](https://raw.githubusercontent.com/SDM-TIB/SPARKLE/main/images/YAGO3-10_linear_regression.png "YAGO3-10_Linear_Regression_Analysis")
+
+
+
+## Running Numerical Learning for baseline and SPaRKLE approach inside ``KGE`` folder
+
+
+
