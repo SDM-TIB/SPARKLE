@@ -1,0 +1,193 @@
+Body,Head,Head_Coverage,Std_Confidence,PCA_Confidence,Positive_Examples,Body_size,PCA_Body_size,Functional_variable
+?a  exports  ?b   ,?a  imports  ?b,0.135761589,0.133116883,0.14801444,41,308,277,?a
+?a  imports  ?b   ,?a  exports  ?b,0.133116883,0.135761589,0.15530303,41,302,264,?a
+?b  influences  ?a   ,?a  hasAcademicAdvisor  ?b,0.053133515,0.004638991,0.172566372,39,8407,226,?a
+?a  isLeaderOf  ?b   ,?a  isPoliticianOf  ?b,0.046446558,0.10978836,0.439153439,83,756,189,?a
+?a  livesIn  ?b   ,?a  isPoliticianOf  ?b,0.027420257,0.020895522,0.192913386,49,2345,254,?a
+?a  isCitizenOf  ?b   ,?a  isPoliticianOf  ?b,0.063794068,0.042081949,0.721518987,114,2709,158,?a
+?b  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.782997763,0.782997763,0.788288288,350,447,444,?b
+?b  dealsWith  ?a   ,?a  hasNeighbor  ?b,0.263982103,0.108856089,0.156291391,118,1084,755,?b
+?a  dealsWith  ?b   ,?a  hasNeighbor  ?b,0.252796421,0.104243542,0.142857143,113,1084,791,?b
+?a  graduatedFrom  ?b   ,?a  worksAt  ?b,0.157068063,0.066793893,0.253012048,420,6288,1660,?a
+?b  isMarriedTo  ?a   ,?a  isMarriedTo  ?b,0.783416252,0.783416252,0.938046068,2362,3015,2518,?a
+?b  participatedIn  ?a   ,?a  happenedIn  ?b,0.22057753,0.226966292,0.293794441,909,4005,3094,?b
+?a  created  ?b   ,?a  wroteMusicFor  ?b,0.079564489,0.063683593,0.122580645,380,5967,3100,?b
+?a  worksAt  ?b   ,?a  graduatedFrom  ?b,0.066793893,0.157068063,0.181112549,420,2674,2319,?a
+?b  happenedIn  ?a   ,?a  participatedIn  ?b,0.226966292,0.22057753,0.237336815,909,4121,3830,?b
+?a  wroteMusicFor  ?b   ,?a  created  ?b,0.063683593,0.079564489,0.149842271,380,4776,2536,?b
+?a  directed  ?b   ,?a  created  ?b,0.131724485,0.178636364,0.2985188,786,4400,2633,?b
+?a  created  ?b   ,?a  directed  ?b,0.178636364,0.131724485,0.22776007,786,5967,3451,?b
+?a  isLeaderOf  ?b   ,?a  livesIn  ?b,0.01663113,0.051587302,0.177272727,39,756,220,?a
+?a  diedIn  ?b   ,?a  livesIn  ?b,0.034115139,0.009038527,0.225352113,80,8851,355,?a
+?a  isCitizenOf  ?b   ,?a  livesIn  ?b,0.10533049,0.091177556,0.413043478,247,2709,598,?a
+?a  isPoliticianOf  ?b   ,?a  livesIn  ?b,0.020895522,0.027420257,0.233333333,49,1787,210,?a
+?b  hasNeighbor  ?a   ,?a  dealsWith  ?b,0.108856089,0.263982103,0.304123711,118,447,388,?a
+?a  hasNeighbor  ?b   ,?a  dealsWith  ?b,0.104243542,0.252796421,0.292746114,113,447,386,?a
+?b  dealsWith  ?a   ,?a  dealsWith  ?b,0.097785978,0.097785978,0.117386489,106,1084,903,?a
+?a  isPoliticianOf  ?b   ,?a  isCitizenOf  ?b,0.042081949,0.063794068,0.708074534,114,1787,161,?a
+?a  livesIn  ?b   ,?a  isCitizenOf  ?b,0.091177556,0.10533049,0.343532684,247,2345,719,?a
+?a  isLocatedIn  ?b   ,?a  hasCapital  ?b,0.317162658,0.010040653,0.232934132,778,77485,3340,?a
+?a  wasBornIn  ?b   ,?a  diedIn  ?b,0.100327647,0.025107442,0.182378312,888,35368,4869,?a
+?b  isConnectedTo  ?a   ,?a  isConnectedTo  ?b,0.518731534,0.518731534,0.526783214,13168,25385,24997,?b
+?a  diedIn  ?b   ,?a  wasBornIn  ?b,0.025107442,0.100327647,0.182378312,888,8851,4869,?a
+?a  hasCapital  ?b   ,?a  isLocatedIn  ?b,0.010040653,0.317162658,0.376937984,778,2453,2064,?a
+?b  hasCapital  ?a   ,?a  isLocatedIn  ?b,0.018274505,0.577252344,0.579378069,1416,2453,2444,?a
+?a  isAffiliatedTo  ?b   ,?a  playsFor  ?b,0.70753539,0.588777779,0.650384899,177931,302204,273578,?a
+?a  playsFor  ?b   ,?a  isAffiliatedTo  ?b,0.588777779,0.70753539,0.771506495,177931,251480,230628,?a
+?a  hasNeighbor  ?f  ?f  imports  ?b   ,?a  imports  ?b,0.261589404,0.143636364,0.190821256,79,550,414,?a
+?e  exports  ?b  ?e  hasNeighbor  ?a   ,?a  exports  ?b,0.318181818,0.162251656,0.21875,98,604,448,?a
+?e  hasNeighbor  ?a  ?e  imports  ?b   ,?a  imports  ?b,0.258278146,0.144444444,0.189320388,78,540,412,?a
+?a  dealsWith  ?f  ?f  exports  ?b   ,?a  exports  ?b,0.399350649,0.089195069,0.11815562,123,1379,1041,?a
+?f  isInterestedIn  ?b  ?a  isInterestedIn  ?f   ,?a  isInterestedIn  ?b,0.010582011,1,1,2,2,2,?a
+?e  hasNeighbor  ?a  ?e  imports  ?b   ,?a  exports  ?b,0.136363636,0.077777778,0.101941748,42,540,412,?a
+?e  isInterestedIn  ?a  ?e  isInterestedIn  ?b   ,?a  isInterestedIn  ?b,0.010582011,0.023809524,0.666666667,2,84,3,?a
+?e  influences  ?a  ?e  isKnownFor  ?b   ,?a  isInterestedIn  ?b,0.026455026,0.017857143,0.104166667,5,280,48,?a
+?e  dealsWith  ?a  ?e  imports  ?b   ,?a  imports  ?b,0.274834437,0.119081779,0.152293578,83,697,545,?a
+?a  dealsWith  ?f  ?f  imports  ?b   ,?a  imports  ?b,0.470198675,0.12283737,0.15990991,142,1156,888,?a
+?f  exports  ?b  ?a  hasNeighbor  ?f   ,?a  exports  ?b,0.308441558,0.159128978,0.217391304,95,597,437,?a
+?e  dealsWith  ?a  ?e  exports  ?b   ,?a  exports  ?b,0.275974026,0.096153846,0.127436282,85,884,667,?a
+?e  dealsWith  ?a  ?e  imports  ?b   ,?a  exports  ?b,0.217532468,0.096126255,0.127376426,67,697,526,?a
+?a  dealsWith  ?f  ?f  exports  ?b   ,?a  imports  ?b,0.433774834,0.094996374,0.121860465,131,1379,1075,?a
+?e  influences  ?a  ?e  isInterestedIn  ?b   ,?a  isInterestedIn  ?b,0.423280423,0.099626401,0.365296804,80,803,219,?a
+?a  influences  ?f  ?f  isInterestedIn  ?b   ,?a  isInterestedIn  ?b,0.301587302,0.083577713,0.35625,57,682,160,?a
+?e  hasNeighbor  ?a  ?e  owns  ?b   ,?a  owns  ?b,0.029565217,0.11038961,0.11038961,17,154,154,?b
+?a  isLeaderOf  ?f  ?f  isLocatedIn  ?b   ,?a  isPoliticianOf  ?b,0.021264689,0.033274956,0.153225806,38,1142,248,?a
+?a  hasChild  ?f  ?f  isLeaderOf  ?b   ,?a  isPoliticianOf  ?b,0.029658646,0.156342183,0.358108108,53,339,148,?a
+?a  hasNeighbor  ?f  ?f  owns  ?b   ,?a  owns  ?b,0.033043478,0.130136986,0.130136986,19,146,146,?b
+?a  isMarriedTo  ?f  ?f  isPoliticianOf  ?b   ,?a  isPoliticianOf  ?b,0.015668719,0.24137931,0.717948718,28,116,39,?a
+?e  hasChild  ?a  ?e  isLeaderOf  ?b   ,?a  isPoliticianOf  ?b,0.016228316,0.109022556,0.305263158,29,266,95,?a
+?a  hasChild  ?f  ?f  isCitizenOf  ?b   ,?a  isPoliticianOf  ?b,0.035814214,0.444444444,0.853333333,64,144,75,?a
+?a  dealsWith  ?b  ?b  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.208053691,0.788135593,0.794871795,93,118,117,?b
+?b  dealsWith  ?a  ?b  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.208053691,0.82300885,0.830357143,93,113,112,?b
+?b  hasCapital  ?f  ?a  livesIn  ?f   ,?a  isPoliticianOf  ?b,0.02686066,0.030612245,0.197530864,48,1568,243,?a
+?e  isMarriedTo  ?a  ?e  isPoliticianOf  ?b   ,?a  isPoliticianOf  ?b,0.015668719,0.229508197,0.736842105,28,122,38,?a
+?f  isLocatedIn  ?b  ?a  livesIn  ?f   ,?a  isPoliticianOf  ?b,0.081701175,0.029979466,0.26691042,146,4870,547,?a
+?a  hasChild  ?f  ?f  isPoliticianOf  ?b   ,?a  isPoliticianOf  ?b,0.331841074,0.59063745,0.850789096,593,1004,697,?a
+?b  dealsWith  ?a  ?a  dealsWith  ?b   ,?a  hasNeighbor  ?b,0.071588367,0.301886792,0.450704225,32,106,71,?b
+?e  hasChild  ?a  ?e  livesIn  ?b   ,?a  isPoliticianOf  ?b,0.010072748,0.087804878,0.168224299,18,205,107,?a
+?a  diedIn  ?f  ?b  hasCapital  ?f   ,?a  isPoliticianOf  ?b,0.144935646,0.010818262,0.108277592,259,23941,2392,?a
+?a  hasCurrency  ?f  ?b  hasCurrency  ?f   ,?a  hasNeighbor  ?b,0.053691275,0.030690537,0.12,24,782,200,?b
+?f  hasNeighbor  ?a  ?b  hasNeighbor  ?f   ,?a  hasNeighbor  ?b,0.706935123,0.228158845,0.228488792,316,1385,1383,?b
+?a  hasNeighbor  ?f  ?b  hasNeighbor  ?f   ,?a  hasNeighbor  ?b,0.691275168,0.222943723,0.223750905,309,1386,1381,?b
+?f  hasNeighbor  ?b  ?a  hasNeighbor  ?f   ,?a  hasNeighbor  ?b,0.693512304,0.223826715,0.223826715,310,1385,1385,?b
+?f  dealsWith  ?b  ?a  hasNeighbor  ?f   ,?a  hasNeighbor  ?b,0.277404922,0.074879227,0.100813008,124,1656,1230,?b
+?e  hasChild  ?a  ?e  isPoliticianOf  ?b   ,?a  isPoliticianOf  ?b,0.341354225,0.608782435,0.851955307,610,1002,716,?a
+?e  hasNeighbor  ?a  ?e  hasNeighbor  ?b   ,?a  hasNeighbor  ?b,0.689038031,0.220946915,0.220946915,308,1394,1394,?b
+?a  graduatedFrom  ?f  ?f  isLocatedIn  ?b   ,?a  isPoliticianOf  ?b,0.261891438,0.03539823,0.202072539,468,13221,2316,?a
+?e  dealsWith  ?b  ?e  hasNeighbor  ?a   ,?a  hasNeighbor  ?b,0.295302013,0.080832823,0.110091743,132,1633,1199,?b
+?a  hasAcademicAdvisor  ?f  ?f  worksAt  ?b   ,?a  worksAt  ?b,0.032535527,0.097424412,0.153982301,87,893,565,?a
+?a  influences  ?f  ?f  worksAt  ?b   ,?a  worksAt  ?b,0.013462977,0.0433213,0.115384615,36,831,312,?a
+?e  hasChild  ?a  ?e  isCitizenOf  ?b   ,?a  isPoliticianOf  ?b,0.037493005,0.426751592,0.788235294,67,157,85,?a
+?e  graduatedFrom  ?b  ?e  hasAcademicAdvisor  ?a   ,?a  worksAt  ?b,0.059087509,0.199747155,0.323770492,158,791,488,?a
+?a  diedIn  ?f  ?f  isLocatedIn  ?b   ,?a  isPoliticianOf  ?b,0.22887521,0.01528572,0.240588235,409,26757,1700,?a
+?e  influences  ?a  ?e  worksAt  ?b   ,?a  worksAt  ?b,0.01421092,0.048346056,0.123376623,38,786,308,?a
+?f  graduatedFrom  ?b  ?a  hasAcademicAdvisor  ?f   ,?a  worksAt  ?b,0.021690352,0.070133011,0.117171717,58,827,495,?a
+?e  hasAcademicAdvisor  ?a  ?e  worksAt  ?b   ,?a  worksAt  ?b,0.030291698,0.093425606,0.147005445,81,867,551,?a
+?f  graduatedFrom  ?b  ?a  influences  ?f   ,?a  worksAt  ?b,0.013836948,0.01592768,0.104815864,37,2323,353,?a
+?a  isLeaderOf  ?f  ?f  isLocatedIn  ?b   ,?a  isLeaderOf  ?b,0.047619048,0.031523643,0.116504854,36,1142,309,?b
+?a  happenedIn  ?f  ?b  hasCapital  ?f   ,?a  happenedIn  ?b,0.025236593,0.138297872,0.221748401,104,752,469,?b
+?a  hasNeighbor  ?f  ?f  hasOfficialLanguage  ?b   ,?a  hasOfficialLanguage  ?b,0.144628099,0.210843373,0.4375,35,166,80,?a
+?a  hasChild  ?f  ?b  hasChild  ?f   ,?a  isMarriedTo  ?b,0.190049751,0.090464162,0.234547687,573,6334,2443,?a
+?a  dealsWith  ?f  ?f  hasOfficialLanguage  ?b   ,?a  hasOfficialLanguage  ?b,0.276859504,0.147577093,0.311627907,67,454,215,?a
+?e  dealsWith  ?a  ?e  hasOfficialLanguage  ?b   ,?a  hasOfficialLanguage  ?b,0.190082645,0.178988327,0.359375,46,257,128,?a
+?e  hasNeighbor  ?a  ?e  hasOfficialLanguage  ?b   ,?a  hasOfficialLanguage  ?b,0.144628099,0.212121212,0.4375,35,165,80,?a
+?b  hasCapital  ?f  ?a  wasBornIn  ?f   ,?a  isPoliticianOf  ?b,0.099048685,0.003097818,0.114267269,177,57137,1549,?a
+?e  hasOfficialLanguage  ?b  ?e  isLocatedIn  ?a   ,?a  hasOfficialLanguage  ?b,0.070247934,0.106918239,0.739130435,17,159,23,?a
+?a  hasAcademicAdvisor  ?f  ?f  worksAt  ?b   ,?a  graduatedFrom  ?b,0.032601781,0.22956327,0.266927083,205,893,768,?a
+?e  graduatedFrom  ?b  ?e  hasAcademicAdvisor  ?a   ,?a  graduatedFrom  ?b,0.017811705,0.14159292,0.177777778,112,791,630,?a
+?f  graduatedFrom  ?b  ?a  hasAcademicAdvisor  ?f   ,?a  graduatedFrom  ?b,0.021469466,0.163240629,0.194524496,135,827,694,?a
+?f  graduatedFrom  ?b  ?a  hasChild  ?f   ,?a  graduatedFrom  ?b,0.024332061,0.112582781,0.175862069,153,1359,870,?a
+?e  graduatedFrom  ?b  ?e  hasChild  ?a   ,?a  graduatedFrom  ?b,0.02480916,0.121118012,0.179310345,156,1288,870,?a
+?f  hasOfficialLanguage  ?b  ?a  isLocatedIn  ?f   ,?a  hasOfficialLanguage  ?b,0.119834711,0.003155947,0.557692308,29,9189,52,?a
+?a  hasChild  ?f  ?f  isMarriedTo  ?b   ,?a  hasChild  ?b,0.037072701,0.10151615,0.133564614,154,1517,1153,?b
+?a  hasChild  ?f  ?b  isMarriedTo  ?f   ,?a  hasChild  ?b,0.03827636,0.103246753,0.135319149,159,1540,1175,?b
+?a  hasNeighbor  ?f  ?f  participatedIn  ?b   ,?a  participatedIn  ?b,0.085642946,0.134880063,0.134880063,343,2543,2543,?b
+?e  hasChild  ?b  ?e  isMarriedTo  ?a   ,?a  hasChild  ?b,0.208714492,0.475589687,0.475589687,867,1823,1823,?b
+?a  actedIn  ?b  ?a  directed  ?b   ,?a  created  ?b,0.019607843,0.306282723,0.515418502,117,382,227,?b
+?e  hasNeighbor  ?a  ?e  participatedIn  ?b   ,?a  participatedIn  ?b,0.085393258,0.136363636,0.136363636,342,2508,2508,?b
+?e  dealsWith  ?a  ?e  participatedIn  ?b   ,?a  participatedIn  ?b,0.142821473,0.141514102,0.141514102,572,4042,4042,?b
+?a  actedIn  ?b  ?a  created  ?b   ,?a  directed  ?b,0.026590909,0.363354037,0.544186047,117,322,215,?b
+?f  hasChild  ?b  ?a  isMarriedTo  ?f   ,?a  hasChild  ?b,0.207992297,0.476558191,0.476558191,864,1813,1813,?b
+?b  hasCapital  ?f  ?a  livesIn  ?f   ,?a  livesIn  ?b,0.068230277,0.102040816,0.102040816,160,1568,1568,?a
+?a  hasAcademicAdvisor  ?f  ?f  isCitizenOf  ?b   ,?a  livesIn  ?b,0.018336887,0.092274678,0.352459016,43,466,122,?a
+?a  hasAcademicAdvisor  ?f  ?f  livesIn  ?b   ,?a  livesIn  ?b,0.016204691,0.150197628,0.431818182,38,253,88,?a
+?a  isLeaderOf  ?f  ?f  isLocatedIn  ?b   ,?a  livesIn  ?b,0.029424307,0.060420315,0.2,69,1142,345,?a
+?a  isMarriedTo  ?f  ?f  livesIn  ?b   ,?a  livesIn  ?b,0.012366738,0.140096618,0.408450704,29,207,71,?a
+?f  isLocatedIn  ?b  ?a  livesIn  ?f   ,?a  livesIn  ?b,0.216204691,0.104106776,0.104106776,507,4870,4870,?a
+?a  happenedIn  ?e  ?e  isLocatedIn  ?b   ,?a  happenedIn  ?b,0.13467605,0.115721435,0.150081125,555,4796,3698,?b
+?f  isLocatedIn  ?b  ?a  worksAt  ?f   ,?a  livesIn  ?b,0.095522388,0.045124899,0.180936995,224,4964,1238,?a
+?e  hasAcademicAdvisor  ?a  ?e  isCitizenOf  ?b   ,?a  livesIn  ?b,0.017910448,0.103703704,0.355932203,42,405,118,?a
+?a  dealsWith  ?f  ?b  isLocatedIn  ?f   ,?a  hasNeighbor  ?b,0.013422819,0.000005768,0.103448276,6,1040173,58,?b
+?b  hasNeighbor  ?a  ?a  hasNeighbor  ?b   ,?a  dealsWith  ?b,0.085793358,0.265714286,0.312080537,93,350,298,?a
+?e  isMarriedTo  ?a  ?e  livesIn  ?b   ,?a  livesIn  ?b,0.012366738,0.127753304,0.414285714,29,227,70,?a
+?a  owns  ?f  ?b  owns  ?f   ,?a  dealsWith  ?b,0.041512915,0.043902439,0.167910448,45,1025,268,?a
+?f  hasNeighbor  ?a  ?b  hasNeighbor  ?f   ,?a  dealsWith  ?b,0.128228782,0.100361011,0.11641541,139,1385,1194,?a
+?a  hasNeighbor  ?f  ?b  hasNeighbor  ?f   ,?a  dealsWith  ?b,0.127306273,0.0995671,0.115869018,138,1386,1191,?a
+?f  dealsWith  ?b  ?a  hasNeighbor  ?f   ,?a  dealsWith  ?b,0.388376384,0.254227053,0.285423729,421,1656,1475,?a
+?f  hasNeighbor  ?b  ?a  hasNeighbor  ?f   ,?a  dealsWith  ?b,0.128228782,0.100361011,0.116026711,139,1385,1198,?a
+?e  hasAcademicAdvisor  ?a  ?e  livesIn  ?b   ,?a  livesIn  ?b,0.015778252,0.16017316,0.406593407,37,231,91,?a
+?f  dealsWith  ?b  ?a  dealsWith  ?f   ,?a  dealsWith  ?b,0.642066421,0.232542599,0.232542599,696,2993,2993,?a
+?e  dealsWith  ?b  ?e  hasNeighbor  ?a   ,?a  dealsWith  ?b,0.390221402,0.259032456,0.291322314,423,1633,1452,?a
+?e  hasNeighbor  ?a  ?e  hasNeighbor  ?b   ,?a  dealsWith  ?b,0.129151292,0.100430416,0.114942529,140,1394,1218,?a
+?e  dealsWith  ?a  ?e  dealsWith  ?b   ,?a  dealsWith  ?b,0.39298893,0.162285714,0.193284936,426,2625,2204,?a
+?e  isCitizenOf  ?b  ?e  livesIn  ?a   ,?a  dealsWith  ?b,0.02398524,0.058426966,0.209677419,26,445,124,?a
+?a  graduatedFrom  ?f  ?f  isLocatedIn  ?b   ,?a  livesIn  ?b,0.191471215,0.033961122,0.146636185,449,13221,3062,?a
+?f  hasCapital  ?b  ?a  isPoliticianOf  ?f   ,?a  livesIn  ?b,0.021748401,0.009945398,0.168874172,51,5128,302,?a
+?e  isCitizenOf  ?a  ?e  isCitizenOf  ?b   ,?a  dealsWith  ?b,0.056273063,0.115969582,0.184848485,61,526,330,?a
+?e  dealsWith  ?b  ?e  isLocatedIn  ?a   ,?a  dealsWith  ?b,0.014760148,0.037296037,0.4,16,429,40,?a
+?a  hasAcademicAdvisor  ?f  ?f  livesIn  ?b   ,?a  isCitizenOf  ?b,0.018456995,0.197628458,0.318471338,50,253,157,?a
+?a  hasAcademicAdvisor  ?f  ?f  isCitizenOf  ?b   ,?a  isCitizenOf  ?b,0.044665928,0.259656652,0.461832061,121,466,262,?a
+?f  isLocatedIn  ?b  ?a  worksAt  ?f   ,?a  isCitizenOf  ?b,0.1535622,0.083803384,0.163844033,416,4964,2539,?a
+?a  influences  ?f  ?f  isCitizenOf  ?b   ,?a  isCitizenOf  ?b,0.047619048,0.097653293,0.400621118,129,1321,322,?a
+?a  diedIn  ?f  ?f  isLocatedIn  ?b   ,?a  livesIn  ?b,0.068230277,0.005979744,0.16064257,160,26757,996,?a
+?f  isLocatedIn  ?b  ?a  wasBornIn  ?f   ,?a  isPoliticianOf  ?b,0.294348069,0.005293188,0.258222877,526,99373,2037,?a
+?a  hasChild  ?f  ?f  isPoliticianOf  ?b   ,?a  isCitizenOf  ?b,0.022517534,0.060756972,0.743902439,61,1004,82,?a
+?a  hasChild  ?f  ?f  isCitizenOf  ?b   ,?a  isCitizenOf  ?b,0.013289037,0.25,0.837209302,36,144,43,?a
+?e  hasAcademicAdvisor  ?a  ?e  isCitizenOf  ?b   ,?a  isCitizenOf  ?b,0.036175711,0.241975309,0.435555556,98,405,225,?a
+?e  hasAcademicAdvisor  ?a  ?e  livesIn  ?b   ,?a  isCitizenOf  ?b,0.014027316,0.164502165,0.290076336,38,231,131,?a
+?a  graduatedFrom  ?f  ?f  isLocatedIn  ?b   ,?a  isCitizenOf  ?b,0.314507198,0.064442932,0.208211144,852,13221,4092,?a
+?e  hasChild  ?a  ?e  isPoliticianOf  ?b   ,?a  isCitizenOf  ?b,0.022148394,0.05988024,0.789473684,60,1002,76,?a
+?e  hasChild  ?a  ?e  isCitizenOf  ?b   ,?a  isCitizenOf  ?b,0.013289037,0.229299363,0.857142857,36,157,42,?a
+?a  created  ?f  ?f  isLocatedIn  ?b   ,?a  isCitizenOf  ?b,0.03765227,0.027792916,0.401574803,102,3670,254,?a
+?f  isLocatedIn  ?b  ?a  livesIn  ?f   ,?a  isCitizenOf  ?b,0.07641196,0.042505133,0.144755245,207,4870,1430,?a
+?e  isPoliticianOf  ?a  ?e  livesIn  ?b   ,?a  hasCapital  ?b,0.017529556,0.163498099,0.17768595,43,263,242,?a
+?e  influences  ?a  ?e  isCitizenOf  ?b   ,?a  isCitizenOf  ?b,0.057954965,0.118401207,0.397468354,157,1326,395,?a
+?a  diedIn  ?f  ?f  isLocatedIn  ?b   ,?a  isCitizenOf  ?b,0.242155777,0.024516949,0.224965706,656,26757,2916,?a
+?e  isPoliticianOf  ?a  ?e  wasBornIn  ?b   ,?a  hasCapital  ?b,0.036282104,0.123439667,0.143780291,89,721,619,?a
+?e  diedIn  ?b  ?e  isPoliticianOf  ?a   ,?a  hasCapital  ?b,0.040766408,0.206185567,0.251256281,100,485,398,?a
+?e  diedIn  ?b  ?e  livesIn  ?a   ,?a  hasCapital  ?b,0.012229923,0.066079295,0.128755365,30,454,233,?a
+?e  diedIn  ?b  ?e  isCitizenOf  ?a   ,?a  hasCapital  ?b,0.02690583,0.102803738,0.10766721,66,642,613,?a
+?a  actedIn  ?f  ?f  isLocatedIn  ?b   ,?a  isCitizenOf  ?b,0.033960871,0.009131514,0.408888889,92,10075,225,?a
+?a  hasChild  ?f  ?f  hasWonPrize  ?b   ,?a  hasWonPrize  ?b,0.0206998,0.149185914,0.248580442,394,2641,1585,?a
+?f  dealsWith  ?b  ?a  isLocatedIn  ?f   ,?a  dealsWith  ?b,0.014760148,0.000142369,0.125984252,16,112384,127,?a
+?b  isLocatedIn  ?a  ?a  isLocatedIn  ?b   ,?a  hasCapital  ?b,0.24052181,0.13862782,0.789825971,590,4256,747,?a
+?e  hasWonPrize  ?b  ?e  isMarriedTo  ?a   ,?a  hasWonPrize  ?b,0.012451403,0.127762803,0.273041475,237,1855,868,?a
+?f  hasWonPrize  ?b  ?a  influences  ?f   ,?a  hasWonPrize  ?b,0.015393506,0.063973799,0.149185336,293,4580,1964,?a
+?e  hasChild  ?a  ?e  hasWonPrize  ?b   ,?a  hasWonPrize  ?b,0.021803089,0.157734702,0.260842238,415,2631,1591,?a
+?e  hasWonPrize  ?b  ?e  influences  ?a   ,?a  hasWonPrize  ?b,0.016969633,0.075661747,0.162230035,323,4269,1991,?a
+?f  hasWonPrize  ?b  ?a  isMarriedTo  ?f   ,?a  hasWonPrize  ?b,0.012556478,0.130174292,0.269447576,239,1836,887,?a
+?f  diedIn  ?b  ?a  hasChild  ?f   ,?a  diedIn  ?b,0.032764659,0.16772701,0.257092199,290,1729,1128,?a
+?a  hasChild  ?f  ?f  wasBornIn  ?b   ,?a  diedIn  ?b,0.030956954,0.14308094,0.293676313,274,1915,933,?a
+?f  isLocatedIn  ?b  ?a  worksAt  ?f   ,?a  diedIn  ?b,0.028697322,0.051168413,0.114260009,254,4964,2223,?a
+?f  diedIn  ?b  ?a  isMarriedTo  ?f   ,?a  diedIn  ?b,0.028584341,0.221347332,0.336884154,253,1143,751,?a
+?f  hasCapital  ?b  ?a  isPoliticianOf  ?f   ,?a  diedIn  ?b,0.027567506,0.047581903,0.114607797,244,5128,2129,?a
+?e  hasCapital  ?b  ?e  isLocatedIn  ?a   ,?a  hasCapital  ?b,0.066449246,0.047205329,0.138018628,163,3453,1181,?a
+?f  isLocatedIn  ?b  ?a  wasBornIn  ?f   ,?a  livesIn  ?b,0.115138593,0.002717036,0.104166667,270,99373,2592,?a
+?e  diedIn  ?b  ?e  isMarriedTo  ?a   ,?a  diedIn  ?b,0.028358378,0.220950704,0.335113485,251,1136,749,?a
+?e  hasChild  ?a  ?e  wasBornIn  ?b   ,?a  diedIn  ?b,0.015817422,0.070140281,0.153005464,140,1996,915,?a
+?e  diedIn  ?b  ?e  hasChild  ?a   ,?a  diedIn  ?b,0.033442549,0.160086533,0.267631103,296,1849,1106,?a
+?f  isLocatedIn  ?b  ?a  wasBornIn  ?f   ,?a  isCitizenOf  ?b,0.331856774,0.009046723,0.222910984,899,99373,4033,?a
+?a  hasChild  ?f  ?f  hasGender  ?b   ,?a  hasGender  ?b,0.020856132,0.536515708,0.721338453,1315,2451,1823,?a
+?e  hasChild  ?a  ?e  hasGender  ?b   ,?a  hasGender  ?b,0.022394569,0.547711404,0.709191361,1412,2578,1991,?a
+?f  hasGender  ?b  ?a  influences  ?f   ,?a  hasGender  ?b,0.027628428,0.654887218,0.758050479,1742,2660,2298,?a
+?a  hasCapital  ?f  ?f  isLocatedIn  ?b   ,?a  isLocatedIn  ?b,0.018893979,0.239489612,0.285770057,1464,6113,5123,?a
+?b  hasCapital  ?f  ?a  isLocatedIn  ?f   ,?a  isLocatedIn  ?b,0.019823192,0.11134469,0.11134469,1536,13795,13795,?a
+?e  hasGender  ?b  ?e  influences  ?a   ,?a  hasGender  ?b,0.033909058,0.629564193,0.729443876,2138,3396,2931,?a
+?e  hasCapital  ?a  ?e  isLocatedIn  ?b   ,?a  isLocatedIn  ?b,0.017590501,0.394729221,0.39622093,1363,3453,3440,?a
+?a  isAffiliatedTo  ?f  ?f  isLocatedIn  ?b   ,?a  isPoliticianOf  ?b,0.177951875,0.003205257,0.221912073,318,99212,1433,?a
+?a  isAffiliatedTo  ?f  ?f  isLocatedIn  ?b   ,?a  livesIn  ?b,0.041791045,0.000987784,0.203742204,98,99212,481,?a
+?a  isAffiliatedTo  ?f  ?f  isLocatedIn  ?b   ,?a  isCitizenOf  ?b,0.045035068,0.00122969,0.151364764,122,99212,806,?a
+?f  isLocatedIn  ?b  ?a  playsFor  ?f   ,?a  diedIn  ?b,0.021466501,0.003201024,0.142428786,190,59356,1334,?a
+?a  isAffiliatedTo  ?f  ?f  isLocatedIn  ?b   ,?a  diedIn  ?b,0.059089368,0.00527154,0.169036846,523,99212,3094,?a
+?e  isLocatedIn  ?a  ?e  isLocatedIn  ?b   ,?a  isLocatedIn  ?b,0.137613732,0.131520197,0.148891309,10663,81075,71616,?a
+?f  isLocatedIn  ?b  ?a  isLocatedIn  ?f   ,?a  isLocatedIn  ?b,0.296341227,0.197975583,0.197975583,22962,115984,115984,?a
