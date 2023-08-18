@@ -1,4 +1,5 @@
 """## Installing the dependencies required for SPaRKLE"""
+import json
 
 """##pip install -r requirements.txt"""
 
@@ -131,11 +132,17 @@ def rdflib_query(rule_df, prefix_query, rdf_data,head_val, predictions_folder, p
     # print(result_df)
     result_df = result_df.replace(prefix_query, '', regex=True)
     result_df.insert(loc=1, column='predicate', value=head_val)
-    result_df.to_csv(predictions_folder+head_val+'.tsv', sep='\t', index=False, header=None)
+    if not os.path.exists(predictions_folder):
+        os.makedirs(predictions_folder)
+    # csv_res_path = os.path.join(predictions_folder + head_val)
+    result_df.to_csv(predictions_folder+f'/{head_val}.tsv', sep='\t', index=False, header=None)
 
     new_result_df = new_result_df.replace(prefix_query, '', regex=True)
     new_result_df.insert(loc=1, column='predicate', value=head_val)
-    new_result_df.to_csv(predictions_score_folder+head_val+'.tsv', sep='\t', index=False)
+    if not os.path.exists(predictions_score_folder):
+        os.makedirs(predictions_score_folder)
+    # csv_res_path_score = os.path.join(predictions_score_folder+head_val)
+    new_result_df.to_csv(predictions_score_folder+f'/{head_val}.tsv', sep='\t', index=False)
 
     # return result_df
 
@@ -254,23 +261,40 @@ def getemptyfiles(rootdir):
             except WindowsError:
                 continue
 
+
+
+def initialize(input_config):
+    with open(input_config, "r") as input_file_descriptor:
+        input_data = json.load(input_file_descriptor)
+    prefix = input_data['prefix']
+    path = './'+input_data['Type']+'/'+input_data['KG']
+    rules = path + '/AMIE_rules/'+ input_data['rules_file']
+    rdf = path +"/"+ input_data['rdf_file']
+
+    predictions_folder = path + "/AMIE_predictions/" + input_data['KG'] +"_predictions"
+
+    return prefix, rules, rdf, path, predictions_folder
+
+
 if __name__ == '__main__':
     start_time = time.time()
-    # AMIE rules
-    rulesfile = "/SPaRKLE/YAGO3-enriched/AMIE_rules/YAGO3-enriched-training.csv"
-    prefix = "http://YAGO3.org/"
-    # RDF data to generate predictions
-    rdf_data = "/SPaRKLE/YAGO3-enriched/YAGO3-enriched-training.nt"
-    predictions_folder = "/SPaRKLE/YAGO3-enriched/AMIE_predictions/YAGO3-enriched-predictions/"
-    predictions_score_folder = "/SPaRKLE/AMIE_SPaRKLE/YAGO3-enriched/AMIE_predictions/YAGO3-enriched-predictions-score/"
+    input_config = 'input.json'
+
+    #Reading input.json file to collect input configuration for executing symbolic learning
+    prefix, rulesfile, rdf_data, path, predictions_folder = initialize(input_config)
+    predictions_score_folder = predictions_folder +"-score/"
+
+    #Processing rules and generating predictions based on PCA heuristics
     rule_df = readRules(rulesfile, prefix, rdf_data, predictions_folder, predictions_score_folder)
+
     #Intersection
-    ground_truth_folder = '/SPaRKLE/AMIE_SPaRKLE/YAGO3-enriched/ground_truth/'
+    ground_truth_folder = path + '/ground_truth/'
     output_folder_ground_truth = ground_truth_folder+'ground_truth_intersection'
     output_folder_predictions = predictions_folder+'predictions_intersection'
     calculate_and_save_intersection(ground_truth_folder, predictions_folder, output_folder_ground_truth,output_folder_predictions)
     getemptyfiles(output_folder_ground_truth)
     getemptyfiles(output_folder_predictions)
+
     #Evaluation
     predictions_folder = output_folder_predictions
     ground_truth_folder = output_folder_ground_truth

@@ -1,0 +1,7 @@
+{
+  "Type": "Baseline",
+  "KG": "FrenchRoyalty",
+  "prefix": "http://FrenchRoyalty.org/",
+  "rules_file": "french_training.csv",
+  "rdf_file": "french_training.nt"
+}
