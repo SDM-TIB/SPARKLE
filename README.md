@@ -42,7 +42,7 @@ Provide configuration for executing
 ```
 The user must supply a few options in the above JSON file to select the type of approach that has to be executed with added configuration details. <br>
 The parameter ``Type`` corresponds to the type of execution, i.e., ```Baseline``` or ```SPaRKLE```.<br>
-Secondly, parameter ``KG`` is the type of knowledge graph, i.e., ```FrenchRoyalty``` or ```Family``` or ```YAGO3```.<br>
+Secondly, parameter ``KG`` is the type of knowledge graph, i.e., ```FrenchRoyalty``` or ```Family``` or ```YAGO3-10```.<br>
 Nextly,```prefix```parameter is used for preprocessing the predictions results for readability.<br>
 Lastly, ```rules_file``` and ```rdf_file``` are the file names for premined rules and KG in the form of `NT`file.
 
@@ -71,7 +71,7 @@ Provide configuration for executing
 ```
 The user must provide a few options in the above JSON file to select the type of approach that has to be executed with added configuration details. <br>
 The parameter ``Type`` corresponds to the type of execution, i.e., ```Baseline``` or ```SPaRKLE```.<br>
-Secondly, parameter ``KG`` is the type of knowledge graph, i.e., ```FrenchRoyalty``` or ```Family``` or ```YAGO3```.<br>
+Secondly, parameter ``KG`` is the type of knowledge graph, i.e., ```FrenchRoyalty``` or ```Family``` or ```YAGO3-10```.<br>
 Nextly,```model```parameter is used for training the KGE model to generate results for readability.<br>
 Lastly, ```path_to_results``` is parameter given by user to store the trained model results.
 
