@@ -52,27 +52,27 @@ def create_model(tf_training, tf_testing, embedding, n_epoch, path):
         random_seed=1235,
     )
     model = results.model
-    results.save_to_directory(path + embedding) #save results to the directory
+    results.save_to_directory(path +'/'+ embedding) #save results to the directory
     return model, results
 
 # Plotting observed losses per KGE model
-def plotting(results,m):
-        plot_losses(results)
-        plt.savefig(result + m + "/loss_plot.png", dpi=300)
+def plotting(result,m, results_path):
+        plot_losses(result)
+        plt.savefig(results_path + m + "/loss_plot.png", dpi=300)
 
 def initialize(input_config):
     with open(input_config, "r") as input_file_descriptor:
         input_data = json.load(input_file_descriptor)
     KG = './'+ input_data['Type']+'/'+input_data['KG']
     models = input_data['model']
-    results = input_data['path_to_results']
-    return KG, models, results
+    results_path = input_data['path_to_results']
+    return KG, models, results_path
 
 if __name__ == '__main__':
     input_config = 'input.json'
 
     # Reading input.json file to collect input configuration for executing symbolic learning
-    KG, models, results = initialize(input_config)
+    KG, models, results_path = initialize(input_config)
     print(models)
     tf, triple_data, entity_label, relation_label = load_dataset(KG)
     # Split them into train, test
@@ -83,10 +83,8 @@ if __name__ == '__main__':
     testing_triples = pd.DataFrame(testing.triples, columns=['Head', 'Relation', 'Tail'])
     testing_triples.to_csv(KG + 'testing_triples.csv', index=False, sep = '\t')
 
-    # print(training)
-    # print(testing)
     # Start training and evaluating KGE models
     for m in models:
-        model, result = create_model(tf_training=training, tf_testing=testing, embedding=m, n_epoch=100, path= results)
-        plotting(result,m)
+        model, result = create_model(tf_training=training, tf_testing=testing, embedding=m, n_epoch=100, path= results_path)
+        plotting(result,m, results_path)
 
